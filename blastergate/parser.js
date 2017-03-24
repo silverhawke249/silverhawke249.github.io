@@ -130,7 +130,7 @@ function clickbind() {
 }
 
 function parse() {
-	var path = "blaster.txt";
+	var path = "https://adamasstokhorst.github.io/blastergate/blaster.txt";
 	var request = new XMLHttpRequest();
 	request.open('GET',path,true);
 	request.send(null);
