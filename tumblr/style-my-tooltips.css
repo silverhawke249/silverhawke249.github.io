@@ -1,0 +1,19 @@
+/* style-my-tootltips plugin, tooltip styling */
+#s-m-t-tooltip{
+/* basic */
+  max-width:300px;
+  z-index:9999;
+  margin-left:20px;
+  margin-top:4px;
+/* style and design */
+  padding:2px 4px;
+  background:#f5f9fc;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+/* font */
+  font-family:"04b03";
+  font-size:9px;
+  line-height:16px;
+  color:#15126f;
+}

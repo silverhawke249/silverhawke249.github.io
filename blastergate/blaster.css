@@ -1,0 +1,189 @@
+@font-face {
+	font-family: "pmd";
+	src: url('/tumblr/PMD.ttf');
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: url('/tumblr/blogbackground.png');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	font-family: "pmd";
+	font-size: 10pt;
+	color: #fff;
+	text-shadow: 1px 1px #000;
+
+}
+div {
+	display: inline-block;
+	padding: 0;
+}
+textarea {
+	width: 100%;
+	resize: none;
+}
+p {
+	margin: 10px 0;
+}
+a {
+	text-decoration: none;
+	color: rgb(205,229,107);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+a:hover {
+	text-decoration: none;
+	color: rgb(136,163,29);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+hr {
+	width: 95%;
+}
+.inputbtn {
+	margin-left: 10px;
+}
+.songname {
+	width: 350px;
+	text-align: left;
+	padding: 5px 15px;
+}
+.diff {
+	width: 55px;
+}
+.life {
+	width: 55px;
+}
+.wrapper {
+	width: auto;
+	display: table;
+	margin: 50px auto;
+    background: rgba(33,71,108,0.9);
+    border-width: 5px 10px;
+    border-color: rgb(12,19,44);
+    border-style: solid;
+    border-radius: 7px;
+	text-align: center;
+}
+.container {
+	padding: 0;
+	margin: 0 auto;
+}
+.text {
+	width: 500px;
+	word-wrap: break-word;
+	text-align: left;
+}
+.pad {
+	padding: 0 10px;
+}
+.requirement {
+	display: none;
+}
+.btn {
+	width: 100%;
+}
+.l15 {
+	padding: 0 5px;
+	background-color: rgba(153, 204, 0, 0.4);
+}
+.l16 {
+	padding: 0 5px;
+	background-color: rgba(200, 158, 0, 0.4);
+}
+.l17 {
+	padding: 0 5px;
+	background-color: rgba(255, 102, 0, 0.4);
+}
+.l18 {
+	padding: 0 5px;
+	background-color: rgba(255, 71, 91, 0.4);
+}
+.l19 {
+	padding: 0 5px;
+	background-color: rgba(255, 51, 153, 0.4);
+}
+.l20 {
+	padding: 0 5px;
+	background-color: rgba(255, 35, 12, 0.4);
+}
+.l15:hover {
+	background-color: rgba(203, 254, 50, 0.4);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.l16:hover {
+	background-color: rgba(250, 208, 50, 0.4);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.l17:hover {
+	background-color: rgba(255, 152, 50, 0.4);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.l18:hover {
+	background-color: rgba(255, 121, 141, 0.4);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.l19:hover {
+	background-color: rgba(255, 101, 203, 0.4);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.l20:hover {
+	background-color: rgba(255, 85, 62, 0.4);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.item {
+	border-bottom: solid 1px black;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.item:last-child {
+	border-bottom: 0;
+}
+.chain {
+	box-shadow: 5px 0 0 0 white inset;
+}
+.chain:hover {
+	box-shadow: 5px 0 0 0 cyan inset;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.hide {
+	visibility: hidden;
+}
