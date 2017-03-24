@@ -1,0 +1,306 @@
+@font-face {
+	font-family: pmd;
+	src: url('https://adamasstokhorst.github.io/tumblr/PMD.ttf');
+}
+body {
+	background: url({text:Background});
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	font-family: "pmd";
+	font-size: 10pt;
+	color: {color:BodyColor};
+	text-shadow: 1px 1px #000;
+}
+.sidebarwrap a:hover, .post a:hover, .tags a:hover {
+	color: {color:LinkHover};
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.wrapper {
+	width: 900px;
+	margin: 0 auto;
+}
+.content {
+	width: 620px;
+	float: right;
+	margin: 25px 0 0 0;
+}
+.sidebarwrap {
+	width: 210px;
+	background: {color:PostColor};
+	float: left;
+	padding: 10px;
+	margin: 0;
+	border-width: 5px 10px;
+	border-color: {color:PostBorder};
+	border-style: solid;
+	border-radius: 7px;
+	position: fixed;
+	top: 200px;
+	color: {color:BodyColor};
+	text-align: center;
+}
+.sidebarwrap a {
+	text-decoration: none;
+	color: {color:LinkColor};
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.desc {
+	padding: 5px 0;
+}
+.post {
+	width: 500px;
+	background: {color:PostColor};
+	float: right;
+	padding: 10px;
+	margin: 0 auto;
+	margin-bottom: 35px;
+	border-width: 5px 10px;
+	border-color: {color:PostBorder};
+	border-style: solid;
+	border-radius: 7px;
+	word-wrap: break-word;
+}
+.post img {
+	max-width: 100%;
+	border-radius: 5px;
+}
+.post p {
+	margin: 8px 0;
+}
+.text p {
+	margin-top: 0;
+}
+.text p:last-of-type {
+	margin-bottom: 0;
+}
+.post a {
+	text-decoration: none;
+	color: {color:LinkColor};
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.photopost img {
+	width: 100%;
+}
+blockquote {
+	padding-left: 10px;
+	border-left: solid 2px {color:BodyColor};
+	margin: 12px;
+}
+.post .askface {
+	width: 40px;
+	padding: 5px;
+	float: left;
+}
+.post .askface img {
+	border: {color:PostBorder} solid 2px;
+}
+.post .ask {
+	width: 430px;
+	padding: 5px 10px;
+	float: left;
+	min-height: 49px;
+}
+.clear {
+	clear: both;
+	height: 0px;
+	overflow: hidden;
+}
+.footer {
+	width: 100%;
+	background: {color:FooterColor};
+	border: {color:PostBorder} solid 1px;
+	font-size: 75%;
+	min-height: 19px;
+	margin-top: 5px;
+}
+.reblogfrom {
+	width: 60%;
+	float: left;
+	padding: 3px 6px;
+}
+.source {
+	width: 35%;
+	float: right;
+	padding: 3px 6px;
+	text-align: right;
+}
+.tags {
+	width: 100%;
+	float: left;
+	padding: 3px 6px;
+}
+.tags a {
+	color: {color:TagColor};
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.reblogface {
+	width: 64px;
+	height: 64px;
+	border: {color:PostBorder} solid 5px;
+	border-radius: 5px;
+	float: left;
+	background: url({text:PortraitBG});
+	background-size: 100%;
+}
+.sourcelink {
+	width: 100%;
+	text-align: right;
+	font-size: 80%;
+}
+.title {
+	font-size: 150%;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.chat {
+	margin-bottom: 5px;
+}
+.quote {
+	font-size: 150%;
+}
+.quotesource {
+	text-align: right;
+	padding-right: 25px;
+	padding-bottom: 5px;
+	font-style: italic;
+}
+.album {
+	width: 100px;
+	float: left;
+}
+.album img {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	width: 100%;
+}
+.audio {
+	width: 500px;
+	min-height: 100px;
+	float: left;
+	background: {color:FooterColor};
+	box-shadow: 0 0 0 1px {color:PostBorder} inset;
+	border-radius: 5px;
+	position: relative;
+}
+.with_album {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	width: 400px;
+}
+.playcount {
+	display: inline;
+	float: right;
+	text-align: right;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 7px;
+}
+.id3 {
+	padding-left: 7px;
+	font-size: 150%;
+}
+.normalf {
+	font-size: 100%;
+}
+.smallf {
+	font-size: 80%;
+}
+.tumblr_audio_player {
+	width: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.with_album .tumblr_audio_player {
+	border-top-left-radius: 0;
+}
+.odd {
+	background: {color:FooterColor};
+}
+.chat th {
+	width: 15%;
+	text-align: left;
+	padding: 0 7px;
+}
+.chat td {
+	padding: 0 5px;
+}
+.note img {
+	width: 16px;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+.notes {
+	margin: 0 auto;
+	padding: 0 0 0 30px;
+}
+.portrait {
+	width: 0;
+	height: 0;
+	float: left;
+	position: relative;
+	top: -110px;
+	left: -15px;
+}
+.portrait img {
+	width: 80px;
+	height: 80px;
+	border: {color:PostBorder} solid 5px;
+	border-radius: 5px;
+	background: url({text:PortraitBG});
+	background-size: 100%;
+	}
+.select select {
+	width: 80%;
+	border: 1px solid {color:PostBorder};
+	font-family: "pmd";
+	color: {color:BodyColor};
+	background-color: {color:FooterColor};
+	margin: 5px 0;
+}
+.pagination {
+	padding-top: 5px;
+}
+.pagination a {
+	visibility: hidden;
+}
+.fullwidth {
+	width: 100%;
+}
+#s-m-t-tooltip {
+	/* basic */
+	max-width:300px;
+	z-index:9999;
+	margin-left:20px;
+	margin-top:4px;
+	/* style and design */
+	padding:2px 4px;
+	background:{color:PostColor};
+	border: {color:PostBorder} solid 1px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	/* font */
+	font-family:"pmd";
+	font-size:80%;
+	line-height:16px;
+	color:{color:BodyColor};
+}
