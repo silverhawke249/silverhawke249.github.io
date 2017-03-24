@@ -70,7 +70,7 @@ function update() {
 	x[1].innerHTML = reqtext
 	$('.inputtxt').val(text);
 	var request = new XMLHttpRequest();
-	request.open('GET',"http://api.fixer.io/latest?base=SGD&symbols=USD&callback=?",true);
+	request.open('GET',"https://api.fixer.io/latest?base=SGD&symbols=USD&callback=?",true);
 	request.send(null);
 	request.onreadystatechange = function () {
 		if (request.readyState === 4 && request.status === 200) {
