@@ -3,7 +3,7 @@
   x = document.getElementsByClassName('tumblr_audio_player');
   for (i = 0; i<x.length; i++) {
 	x[i].height = 31;
-	/*y = x[i].contentDocument;
+	y = x[i].contentDocument;
 	if (y.getElementsByClassName('audio-image').length > 0) {
 		y.getElementsByClassName('audio-image')[0].style.display = 'none';
 	}
@@ -18,5 +18,5 @@
 	y.getElementsByClassName('play-pause')[0].style.fontSize = '20px';
 	y.getElementsByClassName('play-pause')[0].style.color = '#fff';
 	y.getElementsByClassName('audio-info')[0].style.color = '#fff';
-   }*/
+   }
   }
