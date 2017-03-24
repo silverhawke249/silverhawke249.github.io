@@ -3,17 +3,17 @@
 	src: url('https://adamasstokhorst.github.io/tumblr/PMD.ttf');
 }
 body {
-	background: url({text:Background});
+	background: url('https://adamasstokhorst.github.io/tumblr/blogbackground.png');
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
 	font-family: "pmd";
 	font-size: 10pt;
-	color: {color:BodyColor};
+	color: #fff;
 	text-shadow: 1px 1px #000;
 }
 .sidebarwrap a:hover, .post a:hover, .tags a:hover {
-	color: {color:LinkHover};
+	color: rgb(136,163,29);
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
@@ -31,22 +31,22 @@ body {
 }
 .sidebarwrap {
 	width: 210px;
-	background: {color:PostColor};
+	background: rgba(33,71,108,0.9);
 	float: left;
 	padding: 10px;
 	margin: 0;
 	border-width: 5px 10px;
-	border-color: {color:PostBorder};
+	border-color: rgb(12,19,44);
 	border-style: solid;
 	border-radius: 7px;
 	position: fixed;
 	top: 200px;
-	color: {color:BodyColor};
+	color: #fff;
 	text-align: center;
 }
 .sidebarwrap a {
 	text-decoration: none;
-	color: {color:LinkColor};
+	color: rgb(205,229,107);
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
@@ -58,13 +58,13 @@ body {
 }
 .post {
 	width: 500px;
-	background: {color:PostColor};
+	background: rgba(33,71,108,0.9);
 	float: right;
 	padding: 10px;
 	margin: 0 auto;
 	margin-bottom: 35px;
 	border-width: 5px 10px;
-	border-color: {color:PostBorder};
+	border-color: rgb(12,19,44);
 	border-style: solid;
 	border-radius: 7px;
 	word-wrap: break-word;
@@ -84,7 +84,7 @@ body {
 }
 .post a {
 	text-decoration: none;
-	color: {color:LinkColor};
+	color: rgb(205,229,107);
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
@@ -96,7 +96,7 @@ body {
 }
 blockquote {
 	padding-left: 10px;
-	border-left: solid 2px {color:BodyColor};
+	border-left: solid 2px #fff;
 	margin: 12px;
 }
 .post .askface {
@@ -105,7 +105,7 @@ blockquote {
 	float: left;
 }
 .post .askface img {
-	border: {color:PostBorder} solid 2px;
+	border: rgb(12,19,44) solid 2px;
 }
 .post .ask {
 	width: 430px;
@@ -120,8 +120,8 @@ blockquote {
 }
 .footer {
 	width: 100%;
-	background: {color:FooterColor};
-	border: {color:PostBorder} solid 1px;
+	background: rgb(36,94,132);
+	border: rgb(12,19,44) solid 1px;
 	font-size: 75%;
 	min-height: 19px;
 	margin-top: 5px;
@@ -143,7 +143,7 @@ blockquote {
 	padding: 3px 6px;
 }
 .tags a {
-	color: {color:TagColor};
+	color: rgb(205,219,168);
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
@@ -153,10 +153,10 @@ blockquote {
 .reblogface {
 	width: 64px;
 	height: 64px;
-	border: {color:PostBorder} solid 5px;
+	border: rgb(12,19,44) solid 5px;
 	border-radius: 5px;
 	float: left;
-	background: url({text:PortraitBG});
+	background: url('https://adamasstokhorst.github.io/tumblr/portraitbg.png');
 	background-size: 100%;
 }
 .sourcelink {
@@ -194,8 +194,8 @@ blockquote {
 	width: 500px;
 	min-height: 100px;
 	float: left;
-	background: {color:FooterColor};
-	box-shadow: 0 0 0 1px {color:PostBorder} inset;
+	background: rgb(36,94,132);
+	box-shadow: 0 0 0 1px rgb(12,19,44) inset;
 	border-radius: 5px;
 	position: relative;
 }
@@ -233,7 +233,7 @@ blockquote {
 	border-top-left-radius: 0;
 }
 .odd {
-	background: {color:FooterColor};
+	background: rgb(36,94,132);
 }
 .chat th {
 	width: 15%;
@@ -263,17 +263,17 @@ blockquote {
 .portrait img {
 	width: 80px;
 	height: 80px;
-	border: {color:PostBorder} solid 5px;
+	border: rgb(12,19,44) solid 5px;
 	border-radius: 5px;
-	background: url({text:PortraitBG});
+	background: url('https://adamasstokhorst.github.io/tumblr/portraitbg.png');
 	background-size: 100%;
 	}
 .select select {
 	width: 80%;
-	border: 1px solid {color:PostBorder};
+	border: 1px solid rgb(12,19,44);
 	font-family: "pmd";
-	color: {color:BodyColor};
-	background-color: {color:FooterColor};
+	color: #fff;
+	background-color: rgb(36,94,132);
 	margin: 5px 0;
 }
 .pagination {
@@ -293,8 +293,8 @@ blockquote {
 	margin-top:4px;
 	/* style and design */
 	padding:2px 4px;
-	background:{color:PostColor};
-	border: {color:PostBorder} solid 1px;
+	background:rgba(33,71,108,0.9);
+	border: rgb(12,19,44) solid 1px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
@@ -302,5 +302,5 @@ blockquote {
 	font-family:"pmd";
 	font-size:80%;
 	line-height:16px;
-	color:{color:BodyColor};
+	color:#fff;
 }
