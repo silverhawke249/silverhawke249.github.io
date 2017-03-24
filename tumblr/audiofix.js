@@ -16,5 +16,7 @@
 	y.getElementsByClassName('track-name')[0].style.display = 'none';
 	y.getElementsByClassName('track-artist')[0].style.display = 'none';
 	y.getElementsByClassName('play-pause')[0].style.fontSize = '20px';
+	y.getElementsByClassName('play-pause')[0].style.color = '#fff';
+	y.getElementsByClassName('audio-info')[0].style.color = '#fff';
    }
   }
