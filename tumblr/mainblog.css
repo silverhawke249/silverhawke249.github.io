@@ -304,3 +304,6 @@ blockquote {
 	line-height:16px;
 	color:#fff;
 }
+.tmblr-embed > iframe {
+	max-width: 100%;
+}
