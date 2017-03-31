@@ -138,8 +138,6 @@ function writequeue() {
 		if (request.readyState === 4 && request.status === 200) {
 			x = document.getElementsByClassName("fixed")[0];
 			textdb = request.responseText.split("\n");
-			var d = Date.parse(textdb.shift().trim()) - 8*86400000;
-			console.log("last updated: " + d.toLocaleString());
 			var s = "";
 			var p = 0;
 			for (i=0; i<textdb.length; i++) {
