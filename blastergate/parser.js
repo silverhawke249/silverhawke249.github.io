@@ -129,6 +129,53 @@ function clickbind() {
 	});
 }
 
+function writequeue() {
+	var path = "/blastergate/queue.txt";
+	var request = new XMLHttpRequest();
+	request.open('GET',path,true);
+	request.send(null);
+	request.onreadystatechange = function () {
+		if (request.readyState === 4 && request.status === 200) {
+			x = document.getElementsByClassName("fixed")[0];
+			textdb = request.responseText.split("\n");
+			var d = Date.parse(textdb.shift().trim()) - 8*86400000;
+			console.log("last updated: " + d.toLocaleString());
+			var s = "";
+			for (i=0; i<textdb.length; i++) {
+				if (textdb[i][0] == '[') {
+					if (s != "") {
+						if (c > 1) {
+							s2 = "<div class=\"cards\">";
+							s2 += textdb[i].trim();
+							s2 += "<div class=\"wrapper dropdown\">";
+							s2 += s;
+							s2 += "</div></div>";
+						} else {
+							s2 = "<div class=\"cards inactive\">";
+							s2 += textdb[i].trim();
+							s2 += "</div>";
+						}
+						x.innerHTML += s2;
+					}
+					s = "";
+					c = 0;
+				} else {
+					if (c == 0) {
+						s += "<p class=\"cardnum\">";
+						s += textdb[i].trim();
+						s += "</p>";
+					} else {
+						s += "<p>";
+						s += textdb[i].trim();
+						s += "</p>";
+					}
+					c++;
+				}
+			}
+		}
+	}
+}
+
 function parse() {
 	var path = "/blastergate/blaster.txt";
 	var request = new XMLHttpRequest();
@@ -179,6 +226,7 @@ function parse() {
 				writein += "<input class=\"btn\" type=\"button\" value=\"clear all\" onclick=\"clearall()\">";
 				x.innerHTML += writein;
 				clickbind();
+				writequeue();
 			}
 		}
 	}

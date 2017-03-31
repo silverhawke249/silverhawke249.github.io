@@ -187,3 +187,44 @@ hr {
 .hide {
 	visibility: hidden;
 }
+.fixed {
+    position: fixed;
+    top: 10;
+    margin: 0;
+    right: 10;
+    z-index: 1;
+}
+.cards {
+    padding: 0 10px;
+    border-right: solid rgb(12,19,44) 1px;
+    cursor: default;
+}
+.cards:last-child {
+    border-left: 0;
+}
+.cards .dropdown {
+    position: absolute;
+    display: none;
+    margin: 0;
+    text-align: left;
+    padding: 5px;
+    width: 170px;
+    left: -10px;
+    z-index: 0;
+}
+.cards:hover .dropdown {
+    top: 30px;
+    display: block;
+}
+.dropdown p {
+    margin: 2 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px;
+}
+.cardnum {
+	font-size: 120%;
+    text-align: center;
+    margin: 7px 0;
+}
