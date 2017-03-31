@@ -141,21 +141,23 @@ function writequeue() {
 			var d = Date.parse(textdb.shift().trim()) - 8*86400000;
 			console.log("last updated: " + d.toLocaleString());
 			var s = "";
+			var p = 0;
 			for (i=0; i<textdb.length; i++) {
 				if (textdb[i][0] == '[') {
 					if (s != "") {
 						if (c > 1) {
 							s2 = "<div class=\"cards\">";
-							s2 += textdb[i].trim();
+							s2 += "[" + p + "]";
 							s2 += "<div class=\"wrapper dropdown\">";
 							s2 += s;
 							s2 += "</div></div>";
 						} else {
 							s2 = "<div class=\"cards inactive\">";
-							s2 += textdb[i].trim();
+							s2 += "[" + p + "]";
 							s2 += "</div>";
 						}
 						x.innerHTML += s2;
+						p++;
 					}
 					s = "";
 					c = 0;
