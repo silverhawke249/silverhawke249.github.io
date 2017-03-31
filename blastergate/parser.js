@@ -157,8 +157,8 @@ function writequeue() {
 							s2 += "</div>";
 						}
 						x.innerHTML += s2;
-						p++;
 					}
+					p++;
 					s = "";
 					c = 0;
 				} else {
@@ -174,6 +174,18 @@ function writequeue() {
 					c++;
 				}
 			}
+			if (c > 1) {
+				s2 = "<div class=\"cards\">";
+				s2 += "[" + p + "]";
+				s2 += "<div class=\"wrapper dropdown\">";
+				s2 += s;
+				s2 += "</div></div>";
+			} else {
+				s2 = "<div class=\"cards inactive\">";
+				s2 += "[" + p + "]";
+				s2 += "</div>";
+			}
+			x.innerHTML += s2;
 		}
 	}
 }
