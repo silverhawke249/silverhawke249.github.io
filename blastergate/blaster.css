@@ -228,3 +228,6 @@ hr {
     text-align: center;
     margin: 7px 0;
 }
+.inactive {
+	font-color: #999;
+}
