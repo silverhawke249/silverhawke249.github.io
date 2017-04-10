@@ -1,9 +1,9 @@
 @font-face {
 	font-family: pmd;
-	src: url('https://adamasstokhorst.github.io/tumblr/PMD.ttf');
+	src: url('http://silverhawke.xyz/tumblr/PMD.ttf');
 }
 body {
-	background: url('https://adamasstokhorst.github.io/tumblr/blogbackground.png');
+	background: url('http://silverhawke.xyz/tumblr/blogbackground.png');
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
@@ -156,7 +156,7 @@ blockquote {
 	border: rgb(12,19,44) solid 5px;
 	border-radius: 5px;
 	float: left;
-	background: url('https://adamasstokhorst.github.io/tumblr/portraitbg.png');
+	background: url('http://silverhawke.xyz/tumblr/portraitbg.png');
 	background-size: 100%;
 }
 .sourcelink {
@@ -265,7 +265,7 @@ blockquote {
 	height: 80px;
 	border: rgb(12,19,44) solid 5px;
 	border-radius: 5px;
-	background: url('https://adamasstokhorst.github.io/tumblr/portraitbg.png');
+	background: url('http://silverhawke.xyz/tumblr/portraitbg.png');
 	background-size: 100%;
 	}
 .select select {
