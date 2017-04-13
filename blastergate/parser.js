@@ -137,11 +137,11 @@ function writequeue() {
 	request.onreadystatechange = function () {
 		if (request.readyState === 4 && request.status === 200) {
 			x = document.getElementsByClassName("fixed")[0];
-			textdb = request.responseText.split("\n");
+			qdb = request.responseText.split("\n");
 			var s = "";
 			var p = 0;
-			for (i=0; i<textdb.length; i++) {
-				if (textdb[i][0] == '[') {
+			for (i=0; i<qdb.length; i++) {
+				if (qdb[i][0] == '[') {
 					if (s != "") {
 						if (c > 1) {
 							s2 = "<div class=\"cards\">";
@@ -162,11 +162,11 @@ function writequeue() {
 				} else {
 					if (c == 0) {
 						s += "<p class=\"cardnum\">";
-						s += textdb[i].trim();
+						s += qdb[i].trim();
 						s += "</p>";
 					} else {
 						s += "<p>";
-						s += textdb[i].trim();
+						s += qdb[i].trim();
 						s += "</p>";
 					}
 					c++;
