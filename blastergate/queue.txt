@@ -1,11 +1,6 @@
 ﻿[1]
 FLNFPFEWGWRF541H
-4 Black Emperor [GRV]
-2 Wish upon Twin Stars [GRV]
-3 Broken 8cmix [HVN]
-2 infinite:youniverse [MXM]
-4 Make Magic [MXM]
-5 Immortal saga [MXM]
+4 Immortal saga [MXM]
 5 Fin.ArcDeaR [MXM]
 6 HE4VEN ～天国へようこそ～ [MXM]
 [2]
