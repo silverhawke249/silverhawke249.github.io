@@ -44,10 +44,12 @@ function clearall() {
 }
 
 function update() {
-	var blaster_accel = false;
+	var blaster_accel = true;
 	var text = "";
 	var reqtext = "";
 	var runningtotal = 0;
+	if (blaster_accel)
+		text += "BLASTER OverDrive active!!\n"
 	for (i=0; i<nument; i++) {
 		if (state[i]==1) {
 			cur_data = textdb[i].split(sep);
