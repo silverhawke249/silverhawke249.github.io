@@ -44,14 +44,19 @@ function clearall() {
 }
 
 function update() {
+	var blaster_accel = false;
 	var text = "";
 	var reqtext = "";
 	var runningtotal = 0;
 	for (i=0; i<nument; i++) {
 		if (state[i]==1) {
 			cur_data = textdb[i].split(sep);
-			runningtotal += Math.floor(parseInt(cur_data[4])/1000)+1;
-			text += (Math.floor(parseInt(cur_data[4])/1000)+1) + " " + cur_data[1];
+			if (blaster_accel)
+				text += Math.ceil(parseInt(cur_data[4])/990/2) + " " + cur_data[1];
+				runningtotal += Math.ceil(parseInt(cur_data[4])/990/2);
+			else
+				text += Math.ceil(parseInt(cur_data[4])/990) + " " + cur_data[1];
+				runningtotal += Math.ceil(parseInt(cur_data[4])/990);
 			text += " [" + cur_data[2] + "]\n";
 			if (i in reqs) {
 				if (reqtext.indexOf(reqs[i]) === -1)
