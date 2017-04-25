@@ -51,12 +51,13 @@ function update() {
 	for (i=0; i<nument; i++) {
 		if (state[i]==1) {
 			cur_data = textdb[i].split(sep);
-			if (blaster_accel)
+			if (blaster_accel) {
 				text += Math.ceil(parseInt(cur_data[4])/990/2) + " " + cur_data[1];
 				runningtotal += Math.ceil(parseInt(cur_data[4])/990/2);
-			else
+			} else {
 				text += Math.ceil(parseInt(cur_data[4])/990) + " " + cur_data[1];
 				runningtotal += Math.ceil(parseInt(cur_data[4])/990);
+			}
 			text += " [" + cur_data[2] + "]\n";
 			if (i in reqs) {
 				if (reqtext.indexOf(reqs[i]) === -1)
