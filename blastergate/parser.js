@@ -197,6 +197,8 @@ function writequeue() {
 }
 
 function parse() {
+	alert('HEADS UP: I will be on a trip from Apr 30 - May 13, and I won\'t do any blasting during then -- please wait until I return.');
+	
 	var path = "/blastergate/blaster.txt";
 	var request = new XMLHttpRequest();
 	request.open('GET',path,true);
