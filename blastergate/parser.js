@@ -1,4 +1,4 @@
-var reqs = {
+﻿var reqs = {
 	96: "Have HE4VEN ～天国へようこそ～ [EXH] unlocked.",
 	95: "Have Fin.ArcDeaR [EXH] unlocked.",
 	94: "Have Immortal saga [EXH] unlocked.",
@@ -44,7 +44,7 @@ function clearall() {
 }
 
 function update() {
-	var blaster_accel = true;
+	var blaster_accel = false;
 	var text = "";
 	var reqtext = "";
 	var runningtotal = 0;
