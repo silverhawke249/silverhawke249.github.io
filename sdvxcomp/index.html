@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>
+		random picker!!
+	</title>
+	<style>
+		textarea {
+			resize: none;
+			text-align: left;
+		}
+		.container {
+			width: 100%;
+		}
+		.container > * {
+			margin: 25px auto;
+			display: block;
+		}
+		button, div {
+			text-align: center;
+		}
+		.btncont > * {
+			display: inline-block;
+		}
+		#pick {
+			font-size: 90px;
+		}
+	</style>
+	<script type="text/javascript">
+		function toggletext() {
+			var x = document.getElementById("list");
+			var y = document.getElementById("btn");
+			if (x.style.visibility == "hidden") {
+				x.style.visibility = "visible";
+				y.innerHTML = "hide";
+			} else {
+				x.style.visibility = "hidden";
+				y.innerHTML = "show";
+			}
+			return;
+		}
+		function randomize() {
+			var i = 5;
+			var c = i;
+			var t = 0;
+			var x = document.getElementById("list");
+			var y = document.getElementById("pick");
+			var s = x.value.split("\n");
+			var r = s.length;
+			var e = Math.floor((r*Math.random()));
+			y.innerHTML = s[e];
+			var m = 3000 + 1000*Math.random();
+			while (t <= m) {
+				t += c;
+				c += i;
+				setTimeout(function() {
+					e = (e+1) % r;
+					y.innerHTML = s[e];
+				}, t);
+			}
+			setTimeout(function() {
+				s.splice(e, 1);
+				x.value = s.join("\n");
+			}, t + 100);
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<textarea id="list" rows="10" cols="80"></textarea>
+		<div class="btncont">
+			<button id="btn" type="button" onclick="toggletext();">hide</button>
+			<button id="rdn" type="button" onclick="randomize();">randomize!</button>
+		</div>
+		<div id="pick"></div>
+	</div>
+</body>
+</html>
