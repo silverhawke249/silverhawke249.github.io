@@ -274,8 +274,8 @@ function parse() {
 			o_request.open('GET',o_path,true);
 			o_request.send(null);
 			o_request.onreadystatechange = function () {
-				if (request.readyState === 4 && request.status === 200) {
-					omegadb = request.responseText.split("\n");
+				if (o_request.readyState === 4 && o_request.status === 200) {
+					omegadb = o_request.responseText.split("\n");
 					for (i=0; i<omegadb.length; i++) {
 						omegadb[i] = omegadb[i].trim();
 					}
