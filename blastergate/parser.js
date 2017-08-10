@@ -287,19 +287,19 @@ function parse() {
 						console.log("parser error: malformed database file");
 					} else {
 						for (i=0; i<o_nument; i++) {
-							cur_data = omegadb[i].split(o_sep);
+							o_cur_data = omegadb[i].split(o_sep);
 							o_state[2*i] = 0;
 							o_state[2*i+1] = 0;
 							var x = document.getElementsByClassName("container")[0];
 							var writein = "";
 							writein += "<div class=\"item omega\">"
-							writein += "<label class=\"omegachk\"><input class=\"ochk\" type=\"checkbox\" name=\"omega" + cur_data[0] + "e\" value=\"EXH\">";
+							writein += "<label class=\"omegachk\"><input class=\"ochk\" type=\"checkbox\" name=\"omega" + o_cur_data[0] + "e\" value=\"EXH\">";
 							writein += "EXH</label>";
-							writein += "<label class=\"omegachk\"><input class=\"ochk\" type=\"checkbox\" name=\"omega" + cur_data[0] + "m\" value=\"EXH\">";
+							writein += "<label class=\"omegachk\"><input class=\"ochk\" type=\"checkbox\" name=\"omega" + o_cur_data[0] + "m\" value=\"EXH\">";
 							writein += "MXM</label>";
-							writein += "<div class=\"songname\">" + cur_data[1] + "</div>";
-							writein += "<div class=\"diff\">EXH " + cur_data[2] + "</div>";
-							writein += "<div class=\"diff\">MXM " + cur_data[3] + "</div></div><br/>";
+							writein += "<div class=\"songname\">" + o_cur_data[1] + "</div>";
+							writein += "<div class=\"diff\">EXH " + o_cur_data[2] + "</div>";
+							writein += "<div class=\"diff\">MXM " + o_cur_data[3] + "</div></div><br/>";
 							x.innerHTML += writein;
 						}
 						writein = "<textarea class=\"inputtxt\" onclick=\"this.select()\" rows=8 type=\"text\" readonly></textarea>";
