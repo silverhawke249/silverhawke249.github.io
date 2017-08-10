@@ -50,7 +50,7 @@ function update() {
 	var runningtotal = 0;
 	var omega = 0;
 	if (blaster_accel)
-		text += "BLASTER OverDrive active!!\n"
+		text += "BLASTER OverDrive active!!\n";
 	for (i=0; i<nument; i++) {
 		if (state[i]==1) {
 			cur_data = textdb[i].split(sep);
@@ -82,12 +82,12 @@ function update() {
 	text += "---------------\n";
 	var crnum = (omega > Math.ceil(runningtotal/2) ? 0 : (runningtotal - omega*2)/3) + omega;
 	text += runningtotal + " tracks = " + crnum + " blaster starts.";
-	x = document.getElementsByClassName("requirement")
+	x = document.getElementsByClassName("requirement");
 	for (i=0; i<x.length; i++) {
-		x[i].style.display = reqtext == "" ? "none" : "block"
+		x[i].style.display = reqtext == "" ? "none" : "block";
 	}
-	reqtext = "<p style=\"font-size: 20pt\">Requirements</p>" + reqtext
-	x[1].innerHTML = reqtext
+	reqtext = "<p style=\"font-size: 20pt\">Requirements</p>" + reqtext;
+	x[1].innerHTML = reqtext;
 	$('.inputtxt').val(text);
 	var request = new XMLHttpRequest();
 	request.open('GET',"https://api.fixer.io/latest?base=SGD&symbols=USD&callback=?",true);
@@ -310,6 +310,7 @@ function parse() {
 				x.innerHTML += writein;
 				clickbind();
 				writequeue();
+				$(".wrapper").style.visibility = "visible";
 			}
 		}
 	}

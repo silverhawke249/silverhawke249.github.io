@@ -71,6 +71,7 @@ hr {
     border-style: solid;
     border-radius: 7px;
 	text-align: center;
+	visibility: hidden;
 }
 .container {
 	padding: 0;
