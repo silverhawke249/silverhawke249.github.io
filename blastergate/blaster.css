@@ -231,3 +231,24 @@ hr {
 .inactive {
 	color: #999;
 }
+.blank {
+	background-color: #000;
+	width: 100%;
+	padding: 5px 0;
+}
+.omega {
+	padding: 0 5px;
+	background-color: rgba(115, 74, 173, 0.4);
+}
+.omega:hover {
+	background-color: rgba(115, 38, 224, 0.4);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+.omegachk {
+	margin-left: 10.5px;
+	margin-right: 10.5px;
+}

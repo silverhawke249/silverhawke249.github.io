@@ -48,6 +48,7 @@ function update() {
 	var text = "";
 	var reqtext = "";
 	var runningtotal = 0;
+	var omega = 0;
 	if (blaster_accel)
 		text += "BLASTER OverDrive active!!\n"
 	for (i=0; i<nument; i++) {
@@ -67,8 +68,19 @@ function update() {
 			}
 		}
 	}
+	for (i=0; i<omegadb.length; i++) {
+		cur_data = omegadb[i].split(o_sep);
+		if (o_state[i*2] == 1) {
+			text += cur_data[1] + " [EXH]\n";
+			omega += 1;
+		}
+		if (o_state[i*2 + 1] == 1) {
+			text += cur_data[1] + " [MXM]\n";
+			omega += 1;
+		}
+	}
 	text += "---------------\n";
-	var crnum = Math.ceil(runningtotal/2);
+	var crnum = (omega > Math.ceil(runningtotal/2) ? 0 : (runningtotal - omega*2)/3) + omega;
 	text += runningtotal + " tracks = " + crnum + " blaster starts.";
 	x = document.getElementsByClassName("requirement")
 	for (i=0; i<x.length; i++) {
@@ -133,6 +145,18 @@ function clickbind() {
 						pred.push(nextpred[i]);
 			}
 		}
+		update();
+	});
+	$("body").on("change",".ochk", function(){
+		var curpos = $(this).attr("name");
+		curdiff = curpos.substring(curpos.length-1);
+		curpos = parseInt(curpos.substring(5, curpos.length-2))*2;
+		if (curdiff == 'm')
+			curpos += 1;
+		if ($(this).checked)
+			o_state = 1;
+		else
+			o_state = 0;
 		update();
 	});
 }
@@ -240,6 +264,45 @@ function parse() {
 					writein += "<div class=\"songname\">" + cur_data[1] + "</div>";
 					writein += "<div class=\"diff\">" + cur_data[2] + " " + cur_data[3] + "</div>";
 					writein += "<div class=\"life\">" + cur_data[4] + "</div></div><br/>";
+					x.innerHTML += writein;
+				}
+				writein = "<div class=\"item blank\">Ω Dimension</div><br/>";
+				x.innerHTML += writein;
+			}
+		}
+	}
+
+	var path = "/blastergate/omega.txt";
+	var request = new XMLHttpRequest();
+	request.open('GET',path,true);
+	request.send(null);
+	request.onreadystatechange = function () {
+		if (request.readyState === 4 && request.status === 200) {
+			omegadb = request.responseText.split("\n");
+			for (i=0; i<omegadb.length; i++) {
+				omegadb[i] = omegadb[i].trim();
+			}
+			o_nument = parseInt(omegadb.shift());
+			o_sep = omegadb.shift();
+			o_state = new Array(2*o_nument);
+			var pos = 0;
+			if (omegadb.length < o_nument) {
+				console.log("parser error: malformed database file");
+			} else {
+				for (i=0; i<nument; i++) {
+					cur_data = omegadb[i].split(o_sep);
+					o_state[2*i] = 0;
+					o_state[2*i+1] = 0;
+					var x = document.getElementsByClassName("container")[0];
+					var writein = "";
+					writein += "<div class=\"item omega\">"
+					writein += "<label class=\"omegachk\"><input class=\"ochk\" type=\"checkbox\" name=\"omega" + cur_data[0] + "e\" value=\"EXH\">";
+					writein += "EXH</label>";
+					writein += "<label class=\"omegachk\"><input class=\"ochk\" type=\"checkbox\" name=\"omega" + cur_data[0] + "m\" value=\"EXH\">";
+					writein += "MXM</label>";
+					writein += "<div class=\"songname\">" + cur_data[1] + "</div>";
+					writein += "<div class=\"diff\">EXH " + cur_data[2] + "</div>";
+					writein += "<div class=\"diff\">MXM " + cur_data[3] + "</div></div><br/>";
 					x.innerHTML += writein;
 				}
 				writein = "<textarea class=\"inputtxt\" onclick=\"this.select()\" rows=8 type=\"text\" readonly></textarea>";
