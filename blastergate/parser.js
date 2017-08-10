@@ -289,7 +289,7 @@ function parse() {
 			if (omegadb.length < o_nument) {
 				console.log("parser error: malformed database file");
 			} else {
-				for (i=0; i<nument; i++) {
+				for (i=0; i<o_nument; i++) {
 					cur_data = omegadb[i].split(o_sep);
 					o_state[2*i] = 0;
 					o_state[2*i+1] = 0;
