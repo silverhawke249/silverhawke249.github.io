@@ -1,0 +1,12 @@
+﻿10
+;
+0;神獄烙桜;16;18
+1;ULTiMATE INFLATiON;16;18
+2;Juggler's Maddness;16;18
+3;Mirrorwall;16;18
+4;Dyscontrolled Galaxy;17;19
+5;Deadly force;17;19
+6;セイレーン ～悲壮の竪琴～;17;19
+7;Staring at star;17;19
+8;WHITEOUT;18;20
+9;FIN4LE ～終止線の彼方へ～;18;20
