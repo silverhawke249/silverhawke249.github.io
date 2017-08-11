@@ -36,6 +36,12 @@ function clearall() {
 		state[i] = 0;
 		$('input[name=opt'+i+']').val(["no"]);
 	}
+	for (i=0; i<nument; i++) {
+		o_state[2*i] = 0;
+		o_state[2*i+1] = 0;
+		$('input[name=omega'+i+'e]').attr('checked', false);
+		$('input[name=omega'+i+'m]').attr('checked', false);
+	}
 	x = document.getElementsByClassName("requirement")
 	for (i=0; i<x.length; i++) {
 		x[i].style.display = "none";
@@ -80,7 +86,7 @@ function update() {
 		}
 	}
 	text += "---------------\n";
-	var crnum = (omega > Math.ceil(runningtotal/2) ? 0 : (runningtotal - omega*2)/3) + omega;
+	var crnum = (omega > Math.ceil(runningtotal/2) ? 0 : Math.ceil((runningtotal - omega*2)/3)) + omega;
 	text += runningtotal + " tracks = " + crnum + " blaster starts.";
 	x = document.getElementsByClassName("requirement");
 	for (i=0; i<x.length; i++) {
@@ -99,7 +105,7 @@ function update() {
 			text += "\n" + crnum + " blaster starts = " + cost + " USD.";
 			document.getElementById('paypal').href = "https://paypal.me/silverhawke/" + cost + "usd";
 			$('.inputtxt').val(text);
-			if (runningtotal == 0) {
+			if (crnum == 0) {
 				$('.inputtxt').val("");
 				document.getElementById('paypal').href = "https://paypal.me/silverhawke";
 			}
