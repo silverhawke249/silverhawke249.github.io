@@ -155,11 +155,13 @@ function clickbind() {
 	});
 	$("body").on("change",".ochk", function(){
 		var curpos = $(this).attr("name");
+		alert(curpos);
+		alert($(this).attr("checked"));
 		curdiff = curpos.substring(curpos.length-1);
 		curpos = parseInt(curpos.substring(5, curpos.length-2))*2;
 		if (curdiff == 'm')
 			curpos += 1;
-		if ($(this).checked)
+		if ($(this).attr("checked"))
 			o_state[curpos] = 1;
 		else
 			o_state[curpos] = 0;
