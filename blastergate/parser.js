@@ -87,7 +87,7 @@ function update() {
 	}
 	text += "---------------\n";
 	var crnum = (omega > Math.ceil(runningtotal/2) ? 0 : Math.ceil((runningtotal - omega*2)/3)) + omega;
-	text += runningtotal + " tracks = " + crnum + " blaster starts.";
+	text += runningtotal + " tracks + Ω dimension × " + omega + " = " + crnum + " blaster starts.";
 	x = document.getElementsByClassName("requirement");
 	for (i=0; i<x.length; i++) {
 		x[i].style.display = reqtext == "" ? "none" : "block";
@@ -155,13 +155,11 @@ function clickbind() {
 	});
 	$("body").on("change",".ochk", function(){
 		var curpos = $(this).attr("name");
-		alert(curpos);
-		alert($(this).attr("checked"));
 		curdiff = curpos.substring(curpos.length-1);
-		curpos = parseInt(curpos.substring(5, curpos.length-2))*2;
+		curpos = parseInt(curpos.substring(5, curpos.length-1))*2;
 		if (curdiff == 'm')
 			curpos += 1;
-		if ($(this).attr("checked"))
+		if ($(this).is(':checked'))
 			o_state[curpos] = 1;
 		else
 			o_state[curpos] = 0;
