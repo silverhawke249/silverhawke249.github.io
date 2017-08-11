@@ -87,7 +87,18 @@ function update() {
 	}
 	text += "---------------\n";
 	var crnum = (omega > Math.ceil(runningtotal/2) ? 0 : Math.ceil((runningtotal - omega*2)/3)) + omega;
-	text += runningtotal + " tracks + Ω dimension × " + omega + " = " + crnum + " blaster starts.";
+	if (crnum == 0) {
+		$('.inputtxt').val("");
+		document.getElementById('paypal').href = "https://paypal.me/silverhawke";
+		return;
+	}
+	if (runningtotal != 0)
+		text += runningtotal + " tracks ";
+	if (runningtotal != 0 && omega != 0)
+		text += "+ ";
+	if (omega != 0)
+		text += "Ω dimension × " + omega + " ";
+	text += "= " + crnum + " blaster starts.";
 	x = document.getElementsByClassName("requirement");
 	for (i=0; i<x.length; i++) {
 		x[i].style.display = reqtext == "" ? "none" : "block";
@@ -105,10 +116,6 @@ function update() {
 			text += "\n" + crnum + " blaster starts = " + cost + " USD.";
 			document.getElementById('paypal').href = "https://paypal.me/silverhawke/" + cost + "usd";
 			$('.inputtxt').val(text);
-			if (crnum == 0) {
-				$('.inputtxt').val("");
-				document.getElementById('paypal').href = "https://paypal.me/silverhawke";
-			}
 		}
 	}
 }
