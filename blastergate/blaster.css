@@ -71,6 +71,8 @@ hr {
     border-style: solid;
     border-radius: 7px;
 	text-align: center;
+}
+.wrapper:not(.dropdown) {
 	visibility: hidden;
 }
 .container {

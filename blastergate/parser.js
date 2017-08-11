@@ -160,9 +160,9 @@ function clickbind() {
 		if (curdiff == 'm')
 			curpos += 1;
 		if ($(this).checked)
-			o_state = 1;
+			o_state[curpos] = 1;
 		else
-			o_state = 0;
+			o_state[curpos] = 0;
 		update();
 	});
 }
@@ -313,7 +313,7 @@ function parse() {
 						x.innerHTML += writein;
 						clickbind();
 						writequeue();
-						$('.wrapper').css("visibility", "visible");
+						$('.wrapper:not(.dropdown)').css("visibility", "visible");
 					}
 		}
 	}
