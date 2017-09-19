@@ -1,9 +1,5 @@
 ﻿[1]
 FLNFPFEWGWRF541H
-5 HE4VEN ～天国へようこそ～ [MXM]
-5 きたさいたま2000 [HVN]
-5 FLOWER [HVN]
-6 極圏 [HVN]
 [2]
 YSF07D12BEUBBA1A
 神獄烙桜 [MXM]
@@ -18,12 +14,10 @@ FIN4LE ～終止線の彼方へ～ [MXM]
 [3]
 0G4MAH4JGHA9541S
 (PB) ドーパミン
-(PB) Glitter Flatter Scatter
+2 Black Emperor [GRV]
 [4]
 ZGP0H0LRY4E8671Z
 WHITEOUT [MXM]
-FIN4LE ～終止線の彼方へ～ [MXM]
-jubeat PB 1/2
 [5]
 633C9S56HBSHML1X
 2 NEO TREASON [GRV]
@@ -31,6 +25,5 @@ Juggler's Maddness [MXM]
 jubeat PB 3/7
 [6]
 E1CGDKB0899T4521
-(PB) 量子の海のリントヴルム
 [7]
 019G3SA8CHGD3217
