@@ -16,8 +16,7 @@ FLNFPFEWGWRF541H
 6 For UltraPlayers [HVN]
 [2]
 YSF07D12BEUBBA1A
-1 はなむけ [HVN]
-4 take a step forward [HVN]
+2 take a step forward [HVN]
 5 超越してしまった彼女と其を生み落した理由 [HVN]
 6 For UltraPlayers [HVN]
 [3]
@@ -40,12 +39,7 @@ ZGP0H0LRY4E8671Z
 633C9S56HBSHML1X
 [6]
 E1CGDKB0899T4521
-2 Growth Memories [GRV]
-2 Blastix Riotz [GRV]
-4 Preserved Valkyria [GRV]
-3 Lord=Crossight [GRV]
-6 FLügeL《Λrp:ΣggyØ》 [GRV]
-5 ΑΩ [GRV]
+1 ΑΩ [GRV]
 5 XyHATTE [GRV]
 5 snow storm -euphoria- [GRV]
 5 Ganymede kamome mix [INF]
