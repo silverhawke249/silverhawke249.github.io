@@ -263,7 +263,6 @@ hr {
 	margin: 50px;
 	padding: 15px;
 	padding-right: 100px;
-	visibility: visible;
 }
 @keyframes arrow {
 	from {top: 0px;}
@@ -274,4 +273,5 @@ hr {
 	position: relative;
 	animation-name: arrow;
 	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
 }
