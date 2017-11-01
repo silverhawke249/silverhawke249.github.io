@@ -255,3 +255,22 @@ hr {
 	margin-left: 10.5px;
 	margin-right: 10.5px;
 }
+.break {
+	position: absolute;
+	display: table;
+	right: 25px;
+	bottom: 25px;
+	margin: 50px;
+	padding: 15px;
+	padding-right: 100px;
+}
+.arrowspan {
+	font-size: 70%;
+	position: relative;
+	animation-name: arrow;
+	animation-duration: 0.5s;
+}
+@keyframes arrow {
+	from {top: 0px;}
+	to {top: 3px;}
+}
