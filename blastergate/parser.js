@@ -175,7 +175,7 @@ function clickbind() {
 }
 
 function writequeue() {
-	var path = "/blastergate/queue.txt";
+	var path = "../blastergate/queue.txt";
 	var request = new XMLHttpRequest();
 	request.open('GET',path,true);
 	request.send(null);
@@ -234,7 +234,7 @@ function writequeue() {
 }
 
 function parse() {
-	var path = "/blastergate/blaster.txt";
+	var path = "../blastergate/blaster.txt";
 	var request = new XMLHttpRequest();
 	request.open('GET',path,true);
 	request.send(null);
@@ -282,7 +282,7 @@ function parse() {
 				writein = "<div class=\"item blank\">Ω Dimension</div><br/>";
 				x.innerHTML += writein;
 			}
-			var o_path = "/blastergate/omega.txt";
+			var o_path = "../blastergate/omega.txt";
 			var o_request = new XMLHttpRequest();
 			o_request.open('GET',o_path,true);
 			o_request.send(null);
