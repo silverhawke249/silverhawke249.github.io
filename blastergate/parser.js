@@ -112,7 +112,7 @@ function update() {
 	request.onreadystatechange = function () {
 		if (request.readyState === 4 && request.status === 200) {
 			var exch = JSON.parse(request.responseText.substring(2,request.responseText.length-1));
-			var cost = Math.floor(crnum * 4 * exch["rates"]["USD"] * 102) / 100;
+			var cost = Math.floor(crnum * 4 * exch["rates"]["USD"] * 102 * (1 + 0.5/(1 + Math.exp(-0.5 * crnum + 6)))) / 100;
 			text += "\n" + crnum + " blaster starts = " + cost + " USD.";
 			document.getElementById('paypal').href = "https://paypal.me/silverhawke/" + cost + "usd";
 			$('.inputtxt').val(text);
@@ -322,10 +322,8 @@ function parse() {
 						writequeue();
 						$('.wrapper:not(.dropdown)').css("visibility", "visible");
 					}
+				}
+			}
 		}
 	}
-		}
-	}
-
-	
 }
