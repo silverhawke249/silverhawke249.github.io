@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "pmd";
-	src: url('/tumblr/PMD.ttf');
+	src: url('../tumblr/PMD.ttf');
 }
 body {
 	margin: 0;
 	padding: 0;
-	background: url('/tumblr/blogbackground.png');
+	background: url('../tumblr/blogbackground.png');
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
