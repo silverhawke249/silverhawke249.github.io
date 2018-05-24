@@ -1,84 +1,123 @@
 <html>
-<head>
-	<title>
-		random picker!!
-	</title>
-	<style>
-		@font-face {
-		    font-family: 'irohamaru';
-		    src: url(irohamaru-mikami-Medium.ttf);
-		    font-weight: normal;
-		    font-style: normal;
-		}
-		textarea {
-			resize: none;
-			text-align: left;
-		}
-		.container {
-			width: 100%;
-		}
-		.container > * {
-			margin: 25px auto;
-			display: block;
-		}
-		button, div {
-			text-align: center;
-		}
-		.btncont > * {
-			display: inline-block;
-		}
-		#pick {
-			font-family: 'irohamaru';
-			font-size: 90px;
-		}
-	</style>
-	<script type="text/javascript">
-		function toggletext() {
-			var x = document.getElementById("list");
-			var y = document.getElementById("btn");
-			if (x.style.visibility == "hidden") {
-				x.style.visibility = "visible";
-				y.innerHTML = "hide";
-			} else {
-				x.style.visibility = "hidden";
-				y.innerHTML = "show";
+	<head>
+		<title>SDVX randomizer</title>
+		<style>
+			@font-face {
+				font-family: 'Lato';
+				src: url(Lato-Bold.ttf);
+				font-weight: normal;
+				font-style: normal;
 			}
-			return;
-		}
-		function randomize() {
-			var i = 5;
-			var c = i;
-			var t = 0;
-			var x = document.getElementById("list");
-			var y = document.getElementById("pick");
-			var s = x.value.split("\n");
-			var r = s.length;
-			var e = Math.floor((r*Math.random()));
-			y.innerHTML = s[e];
-			var m = 3000 + 1000*Math.random();
-			while (t <= m) {
-				t += c;
-				c += i;
-				setTimeout(function() {
-					e = (e+1) % r;
-					y.innerHTML = s[e];
-				}, t);
+			div {
+				font-family: Lato;
+				text-align: center;
 			}
-			setTimeout(function() {
-				s.splice(e, 1);
-				x.value = s.join("\n");
-			}, t + 100);
-		}
-	</script>
-</head>
-<body>
-	<div class="container">
-		<textarea id="list" rows="10" cols="80"></textarea>
-		<div class="btncont">
-			<button id="btn" type="button" onclick="toggletext();">hide</button>
-			<button id="rdn" type="button" onclick="randomize();">randomize!</button>
+			.container {
+				width: 100%;
+			}
+			.container > * {
+				margin: 20px auto;
+				display: block;
+			}
+			.songs {
+				display: flex;
+				width: 1200px;
+				height: 500px;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				border: 1px black solid;
+			}
+			.song {
+				display: table;
+				padding: 5px;
+				height: 90px;
+				width: 590px;
+				font-size: 30px;
+			}
+			span {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.options {
+				display: flex;
+				width: 1200px;
+				height: 200px;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				border: 1px black solid;
+			}
+			.EXH {
+				background: rgb(251, 97, 146);
+			}
+			.INF {
+				background: rgb(253, 65, 250);
+			}
+			.GRV {
+				background: rgb(250, 155, 28);
+			}
+			.HVN {
+				background: rgb(68, 231, 254);
+			}
+			.MXM {
+				background: rgb(224, 222, 255);
+			}
+		</style>
+		<script type="text/javascript" charset="UTF-8" src="songdata.js"></script>
+		<script type="text/javascript">
+			function randomize() {
+				var indexes = [];
+				while (indexes.length < 10) {
+					var index = Math.floor(Math.random() * songdata.length);
+					if (!(index in indexes)) indexes.push(index);
+				}
+				for (i in indexes) {
+					var x = document.getElementById("song" + i);
+					x.innerHTML = songdata[indexes[i]][0];
+					x.innerHTML += " [" + songdata[indexes[i]][1] + " ";
+					x.innerHTML += songdata[indexes[i]][2] + "]";
+					x.className = songdata[indexes[i]][1];
+				}
+				return;
+			}
+		</script>
+	</head>
+	<body onload="randomize();">
+		<div class="container">
+			<div class="songs">
+				<div class="song">
+					<span id="song0"></span>
+				</div>
+				<div class="song">
+					<span id="song1"></span>
+				</div>
+				<div class="song">
+					<span id="song2"></span>
+				</div>
+				<div class="song">
+					<span id="song3"></span>
+				</div>
+				<div class="song">
+					<span id="song4"></span>
+				</div>
+				<div class="song">
+					<span id="song5"></span>
+				</div>
+				<div class="song">
+					<span id="song6"></span>
+				</div>
+				<div class="song">
+					<span id="song7"></span>
+				</div>
+				<div class="song">
+					<span id="song8"></span>
+				</div>
+				<div class="song">
+					<span id="song9"></span>
+				</div>
+			</div>
+			<div class="options">
+				
+			</div>
 		</div>
-		<div id="pick"></div>
-	</div>
-</body>
+	</body>
 </html>
