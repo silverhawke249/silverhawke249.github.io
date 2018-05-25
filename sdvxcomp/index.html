@@ -13,10 +13,15 @@
 				justify-content: center;
 				align-items: center;
 				margin: 0;
+				background: #fff;
 			}
 			div {
 				font-family: Lato;
 				text-align: center;
+			}
+			.border {
+				border: 2px grey solid;
+				border-radius: 3px;
 			}
 			.container {
 				width: 100%;
@@ -31,8 +36,6 @@
 				height: 500px;
 				flex-wrap: wrap;
 				justify-content: space-between;
-				border: 2px grey solid;
-				border-radius: 3px;
 			}
 			.song {
 				display: table;
@@ -48,12 +51,25 @@
 			}
 			.options {
 				display: flex;
-				width: 1200px;
-				height: 200px;
 				flex-wrap: wrap;
 				justify-content: space-between;
-				border: 2px grey solid;
-				border-radius: 3px;
+				align-items: center;
+				flex-flow: column;
+				width: 1180px;
+				height: 180px;
+				padding: 10px;
+			}
+			.groups {
+				display: flex;
+				justify-content: space-between;
+				padding: 5px 15px;
+				margin: 5px 0;
+			}
+			.option {
+				margin-right: 50px;
+			}
+			.option:last-child {
+				margin-right: 0;
 			}
 			.EXH {
 				background: rgb(251, 97, 146);
@@ -70,7 +86,23 @@
 			.MXM {
 				background: rgb(224, 222, 255);
 			}
+			.EXH:hover {
+				background: rgba(251, 97, 146, 0.5);
+			}
+			.INF:hover {
+				background: rgba(253, 65, 250, 0.5);
+			}
+			.GRV:hover {
+				background: rgba(250, 155, 28, 0.5);
+			}
+			.HVN:hover {
+				background: rgba(68, 231, 254, 0.5);
+			}
+			.MXM:hover {
+				background: rgba(224, 222, 255, 0.5);
+			}
 		</style>
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" charset="UTF-8" src="songdata.js"></script>
 		<script type="text/javascript">
 			function randomize() {
@@ -90,11 +122,18 @@
 				}
 				return;
 			}
+			function reset() {
+				$(":checkbox").prop("checked", true);
+				for (var i=0; i<10; i++) {
+					$("[name=s"+i+"]").prop("checked", false);
+				}
+				return;
+			}
 		</script>
 	</head>
 	<body onload="randomize();">
 		<div class="container">
-			<div class="songs">
+			<div class="songs border">
 				<div class="song">
 					<span id="song0"></span>
 				</div>
@@ -126,8 +165,52 @@
 					<span id="song9"></span>
 				</div>
 			</div>
-			<div class="options">
-				
+			<div class="options border">
+				<div class="groups">
+					<div class="option">
+						<input type="checkbox" checked=checked name="lv16">Level 16
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="lv17">Level 17
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="lv18">Level 18
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="lv19">Level 19
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="lv20">Level 20
+					</div>
+				</div>
+				<div class="groups">
+					<div class="option">
+						<input type="checkbox" checked=checked name="allow_pb">Allow POLICY BREAK
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="allow_blaster">Allow BLASTER GATE
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="allow_od">Allow Ω DIMENSION
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="allow_events">Allow misc. event
+					</div>
+				</div>
+				<div class="groups">
+					<div class="option">
+						Keep songs
+					</div>
+					<div class="option">
+						1<input type="checkbox" name="s0"><input type="checkbox" name="s1"><input type="checkbox" name="s2"><input type="checkbox" name="s3"><input type="checkbox" name="s4"><input type="checkbox" name="s5"><input type="checkbox" name="s6"><input type="checkbox" name="s7"><input type="checkbox" name="s8"><input type="checkbox" name="s9">10
+					</div>
+				</div>
+				<div class="groups">
+					<div class="option">
+						<input type="button" value="Randomize" onclick="randomize();">
+						<input type="reset" value="Reset options" onclick="reset();">
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
