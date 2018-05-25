@@ -8,6 +8,12 @@
 				font-weight: normal;
 				font-style: normal;
 			}
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+			}
 			div {
 				font-family: Lato;
 				text-align: center;
@@ -25,7 +31,8 @@
 				height: 500px;
 				flex-wrap: wrap;
 				justify-content: space-between;
-				border: 1px black solid;
+				border: 2px grey solid;
+				border-radius: 3px;
 			}
 			.song {
 				display: table;
@@ -37,6 +44,7 @@
 			span {
 				display: table-cell;
 				vertical-align: middle;
+				padding: 0 5px;
 			}
 			.options {
 				display: flex;
@@ -44,7 +52,8 @@
 				height: 200px;
 				flex-wrap: wrap;
 				justify-content: space-between;
-				border: 1px black solid;
+				border: 2px grey solid;
+				border-radius: 3px;
 			}
 			.EXH {
 				background: rgb(251, 97, 146);
@@ -68,7 +77,9 @@
 				var indexes = [];
 				while (indexes.length < 10) {
 					var index = Math.floor(Math.random() * songdata.length);
-					if (!(index in indexes)) indexes.push(index);
+					if (indexes.indexOf(index) == -1) {
+						indexes.push(index);
+					}
 				}
 				for (i in indexes) {
 					var x = document.getElementById("song" + i);
