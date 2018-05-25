@@ -43,6 +43,7 @@
 				height: 90px;
 				width: 590px;
 				font-size: 30px;
+				user-select: none;
 			}
 			span {
 				display: table-cell;
@@ -101,34 +102,76 @@
 			.MXM:hover {
 				background: rgba(224, 222, 255, 0.5);
 			}
+			.disabled {
+				background: rgb(144, 144, 144);
+				color: #555;
+			}
+			.disabled:hover {
+				background: rgba(144, 144, 144, 0.5);
+			}
 		</style>
 		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" charset="UTF-8" src="songdata.js"></script>
 		<script type="text/javascript">
 			function randomize() {
-				var indexes = [];
-				while (indexes.length < 10) {
-					var index = Math.floor(Math.random() * songdata.length);
-					if (indexes.indexOf(index) == -1) {
-						indexes.push(index);
+				var new_indexes = [];
+				var fixed_ctr = 0;
+				var sub_songdata = [];
+				var sub_indexes = [];
+				for (i in songdata) {
+					if (!($("[name=lv16]").prop("checked")) && songdata[i][2]=="16") continue;
+					if (!($("[name=lv17]").prop("checked")) && songdata[i][2]=="17") continue;
+					if (!($("[name=lv18]").prop("checked")) && songdata[i][2]=="18") continue;
+					if (!($("[name=lv19]").prop("checked")) && songdata[i][2]=="19") continue;
+					if (!($("[name=lv20]").prop("checked")) && songdata[i][2]=="20") continue;
+					if (!($("[name=allow_pb]").prop("checked")) && songdata[i][3]=="1") continue;
+					if (!($("[name=allow_blaster]").prop("checked")) && songdata[i][4]=="1") continue;
+					if (!($("[name=allow_od]").prop("checked")) && songdata[i][5]=="1") continue;
+					if (!($("[name=allow_events]").prop("checked")) && songdata[i][6]=="1") continue;
+					sub_indexes.push(i);
+				}
+				for (var i=0; i<10; i++) {
+					if ($("[name=s"+i+"]").prop("checked")) {
+						new_indexes.push(indexes[i]);
+						fixed_ctr += 1;
+					} else {
+						if (new_indexes.length - fixed_ctr >= sub_indexes.length) {
+							new_indexes.push(null);
+						} else {
+							var index = Math.floor(Math.random() * sub_indexes.length);
+							while (new_indexes.indexOf(sub_indexes[index]) != -1)
+								var index = Math.floor(Math.random() * sub_indexes.length);
+							new_indexes.push(sub_indexes[index]);
+						}
 					}
 				}
+				indexes = new_indexes;
 				for (i in indexes) {
 					var x = document.getElementById("song" + i);
-					x.innerHTML = songdata[indexes[i]][0];
-					x.innerHTML += " [" + songdata[indexes[i]][1] + " ";
-					x.innerHTML += songdata[indexes[i]][2] + "]";
-					x.className = songdata[indexes[i]][1];
+					if (indexes[i] == null) {
+						x.innerHTML = "";
+						x.className = "";
+					} else {
+						x.innerHTML = songdata[indexes[i]][0];
+						x.innerHTML += " [" + songdata[indexes[i]][1] + " ";
+						x.innerHTML += songdata[indexes[i]][2] + "]";
+						x.className = songdata[indexes[i]][1];
+					}
 				}
 				return;
-			}
+			};
 			function reset() {
 				$(":checkbox").prop("checked", true);
 				for (var i=0; i<10; i++) {
 					$("[name=s"+i+"]").prop("checked", false);
 				}
 				return;
-			}
+			};
+			$(document).ready(function(){
+				$(".song > span").mouseup(function() {
+					$(this).toggleClass("disabled");
+				});
+			});
 		</script>
 	</head>
 	<body onload="randomize();">
@@ -168,33 +211,33 @@
 			<div class="options border">
 				<div class="groups">
 					<div class="option">
-						<input type="checkbox" checked=checked name="lv16">Level 16
+						<input type="checkbox" checked=checked name="lv16" id="lv16"><label for="lv16">Level 16</label>
 					</div>
 					<div class="option">
-						<input type="checkbox" checked=checked name="lv17">Level 17
+						<input type="checkbox" checked=checked name="lv17" id="lv17"><label for="lv17">Level 17</label>
 					</div>
 					<div class="option">
-						<input type="checkbox" checked=checked name="lv18">Level 18
+						<input type="checkbox" checked=checked name="lv18" id="lv18"><label for="lv18">Level 18</label>
 					</div>
 					<div class="option">
-						<input type="checkbox" checked=checked name="lv19">Level 19
+						<input type="checkbox" checked=checked name="lv19" id="lv19"><label for="lv19">Level 19</label>
 					</div>
 					<div class="option">
-						<input type="checkbox" checked=checked name="lv20">Level 20
+						<input type="checkbox" checked=checked name="lv20" id="lv20"><label for="lv20">Level 20</label>
 					</div>
 				</div>
 				<div class="groups">
 					<div class="option">
-						<input type="checkbox" checked=checked name="allow_pb">Allow POLICY BREAK
+						<input type="checkbox" checked=checked name="allow_pb" id="allow_pb"><label for="allow_pb">Allow POLICY BREAK</label>
 					</div>
 					<div class="option">
-						<input type="checkbox" checked=checked name="allow_blaster">Allow BLASTER GATE
+						<input type="checkbox" checked=checked name="allow_blaster" id="allow_blaster"><label for="allow_blaster">Allow BLASTER GATE</label>
 					</div>
 					<div class="option">
-						<input type="checkbox" checked=checked name="allow_od">Allow Ω DIMENSION
+						<input type="checkbox" checked=checked name="allow_od" id="allow_od"><label for="allow_od">Allow Ω DIMENSION</label>
 					</div>
 					<div class="option">
-						<input type="checkbox" checked=checked name="allow_events">Allow misc. event
+						<input type="checkbox" checked=checked name="allow_events" id="allow_events"><label for="allow_events">Allow misc. event</label>
 					</div>
 				</div>
 				<div class="groups">
