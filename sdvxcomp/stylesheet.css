@@ -1,0 +1,122 @@
+@font-face {
+	font-family: 'Lato';
+	src: url(Lato-Bold.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	background: #fff;
+}
+div {
+	font-family: Lato;
+	text-align: center;
+}
+img {
+	width: 90px;
+}
+.border {
+	border: 2px grey solid;
+	border-radius: 3px;
+}
+.container {
+	width: 100%;
+}
+.container > * {
+	margin: 20px auto;
+	display: block;
+}
+.songs {
+	display: flex;
+	width: 1200px;
+	height: 500px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.song {
+	display: table;
+	padding: 5px;
+	height: 90px;
+	width: 590px;
+	font-size: 24px;
+	user-select: none;
+}
+span {
+	width: 400px;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+.difficulty {
+	width: 90px;
+	height: 90px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.difficulty > div {
+	width: 90px;
+	display: inline-block;
+}
+.options {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: column;
+	width: 1180px;
+	height: 180px;
+	padding: 10px;
+}
+.groups {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 15px;
+	margin: 5px 0;
+}
+.option {
+	margin-right: 50px;
+}
+.option:last-child {
+	margin-right: 0;
+}
+.EXH {
+	background: rgb(251, 97, 146);
+}
+.INF {
+	background: rgb(253, 65, 250);
+}
+.GRV {
+	background: rgb(250, 155, 28);
+}
+.HVN {
+	background: rgb(68, 231, 254);
+}
+.MXM {
+	background: rgb(224, 222, 255);
+}
+.EXH:hover, .EXH.hovered {
+	background: rgba(251, 97, 146, 0.5);
+}
+.INF:hover, .INF.hovered {
+	background: rgba(253, 65, 250, 0.5);
+}
+.GRV:hover, .GRV.hovered {
+	background: rgba(250, 155, 28, 0.5);
+}
+.HVN:hover, .HVN.hovered {
+	background: rgba(68, 231, 254, 0.5);
+}
+.MXM:hover, .MXM.hovered {
+	background: rgba(224, 222, 255, 0.5);
+}
+.disabled {
+	background: rgb(144, 144, 144);
+	color: #555;
+	filter: grayscale(100%);
+}
+.disabled:hover, .disabled.hovered {
+	background: rgba(144, 144, 144, 0.5);
+}
