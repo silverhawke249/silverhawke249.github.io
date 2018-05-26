@@ -65,6 +65,10 @@ function reset() {
 	for (var i=0; i<10; i++) {
 		$("[name=s"+i+"]").prop("checked", false);
 	}
+	$("[name=lv16]").prop("checked", false);
+	$("[name=lv18]").prop("checked", false);
+	$("[name=lv19]").prop("checked", false);
+	$("[name=lv20]").prop("checked", false);
 	return;
 };
 $(document).ready(function(){
@@ -79,14 +83,26 @@ $(document).ready(function(){
 	});
 	$(".song > span").mouseover(function() {
 		$(this).parent().find("div").toggleClass("hovered");
+		$(this).parent().find("img").toggleClass("hovered");
 	});
 	$(".song > span").mouseout(function() {
 		$(this).parent().find("div").toggleClass("hovered");
+		$(this).parent().find("img").toggleClass("hovered");
 	});
 	$(".song > div").mouseover(function() {
 		$(this).parent().find("span").toggleClass("hovered");
+		$(this).parent().find("img").toggleClass("hovered");
 	});
 	$(".song > div").mouseout(function() {
 		$(this).parent().find("span").toggleClass("hovered");
+		$(this).parent().find("img").toggleClass("hovered");
+	});
+	$(".song > img").mouseover(function() {
+		$(this).parent().find("span").toggleClass("hovered");
+		$(this).parent().find("div").toggleClass("hovered");
+	});
+	$(".song > img").mouseout(function() {
+		$(this).parent().find("span").toggleClass("hovered");
+		$(this).parent().find("div").toggleClass("hovered");
 	});
 });

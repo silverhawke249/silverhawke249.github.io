@@ -120,3 +120,6 @@ span {
 .disabled:hover, .disabled.hovered {
 	background: rgba(144, 144, 144, 0.5);
 }
+img:hover, img.hovered {
+	opacity: 0.5;
+}
