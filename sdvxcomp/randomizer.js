@@ -64,11 +64,11 @@ function randomize() {
 			$("#img" + i).attr("class", "");
 			$("#img" + i).attr("src", "dummy.png");
 			
-			var img_suffix = "";
-			if (songdata[indexes[i]][1] == "EXH") img_suffix += "3/";
-			else if (songdata[indexes[i]][1] == "MXM") img_suffix += "5/";
-			else img_suffix += "4/";
 			if (songdata[indexes[i]][7] != "0") {
+				var img_suffix = "";
+				if (songdata[indexes[i]][1] == "EXH") img_suffix += "3/";
+				else if (songdata[indexes[i]][1] == "MXM") img_suffix += "5/";
+				else img_suffix += "4/";
 				img_suffix += songdata[indexes[i]][7] + ".png"
 				$("#img" + i).attr("src", "https://sdvx.sgfc.co/jackets/" + img_suffix);
 			} else {
