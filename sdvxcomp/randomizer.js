@@ -1,8 +1,20 @@
+String.prototype.hashCode = function() {
+  var hash = 0, i, chr;
+  if (this.length === 0) return hash;
+  for (i = 0; i < this.length; i++) {
+    chr   = this.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + chr;
+    hash |= 0;
+  }
+  return (hash + 2147483647) + 1;
+};
+
 function randomize() {
 	var new_indexes = [];
 	var fixed_ctr = 0;
 	var sub_songdata = [];
 	var sub_indexes = [];
+	
 	for (i in songdata) {
 		if (!($("[name=lv16]").prop("checked")) && songdata[i][2]=="16") continue;
 		if (!($("[name=lv17]").prop("checked")) && songdata[i][2]=="17") continue;
@@ -15,6 +27,7 @@ function randomize() {
 		if (!($("[name=allow_events]").prop("checked")) && songdata[i][6]=="1") continue;
 		sub_indexes.push(i);
 	}
+	
 	for (var i=0; i<10; i++) {
 		if ($("[name=s"+i+"]").prop("checked")) {
 			new_indexes.push(indexes[i]);
@@ -30,6 +43,7 @@ function randomize() {
 			}
 		}
 	}
+	
 	indexes = new_indexes;
 	for (i in indexes) {
 		var x = document.getElementById("song" + i);
@@ -54,8 +68,12 @@ function randomize() {
 			if (songdata[indexes[i]][1] == "EXH") img_suffix += "3/";
 			else if (songdata[indexes[i]][1] == "MXM") img_suffix += "5/";
 			else img_suffix += "4/";
-			img_suffix += songdata[indexes[i]][7] + ".png"
-			$("#img" + i).attr("src", "https://sdvx.sgfc.co/jackets/" + img_suffix);
+			if (songdata[indexes[i]][7] != "0") {
+				img_suffix += songdata[indexes[i]][7] + ".png"
+				$("#img" + i).attr("src", "https://sdvx.sgfc.co/jackets/" + img_suffix);
+			} else {
+				$("#img" + i).attr("src", "img/" + songdata[indexes[i]][0].hashCode() + songdata[indexes[i]][1] + ".png");
+			}
 		}
 	}
 	return;
@@ -71,6 +89,7 @@ function reset() {
 	$("[name=lv20]").prop("checked", false);
 	return;
 };
+
 $(document).ready(function(){
 	$(".song > span").mouseup(function() {
 		$(this).parent().children().toggleClass("disabled");
