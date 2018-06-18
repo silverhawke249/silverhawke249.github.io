@@ -1,4 +1,4 @@
 $ cat gitignore
 
-sdvxcomp\debug.js
+sdvxcomp/debug.js
 update.bat
