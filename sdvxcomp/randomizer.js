@@ -10,6 +10,8 @@ String.prototype.hashCode = function() {
 };
 
 function randomize() {
+	$(".container").css("visibility", "visible");
+	
 	var new_indexes = [];
 	var fixed_ctr = 0;
 	var sub_songdata = [];

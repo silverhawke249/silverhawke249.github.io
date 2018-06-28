@@ -24,9 +24,10 @@ img {
 }
 .container {
 	width: 100%;
+	visibility: hidden;
 }
 .container > * {
-	margin: 20px auto;
+	margin: 18px auto;
 	display: block;
 }
 .songs {
