@@ -19,8 +19,8 @@ img {
 	width: 90px;
 }
 .border {
-	border: 2px grey solid;
-	border-radius: 3px;
+	/* border: 2px grey solid;
+	border-radius: 3px; */
 }
 .container {
 	width: 100%;
