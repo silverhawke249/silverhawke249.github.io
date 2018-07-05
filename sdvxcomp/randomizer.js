@@ -10,8 +10,6 @@ String.prototype.hashCode = function() {
 };
 
 function randomize() {
-	$(".container").css("visibility", "visible");
-	
 	var new_indexes = [];
 	var fixed_ctr = 0;
 	var sub_songdata = [];
@@ -50,8 +48,8 @@ function randomize() {
 	for (i in indexes) {
 		var x = document.getElementById("song" + i);
 		if (indexes[i] == null) {
-			$("#song" + i).html("");
-			$("#diff" + i).html("");
+			$("#song" + i).html("---");
+			$("#diff" + i).html("---");
 			$("#lvl" + i).html("");
 			$("#song" + i).attr("class", "");
 			$("#diff" + i).parent().attr("class", "difficulty");

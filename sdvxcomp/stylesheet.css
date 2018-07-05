@@ -50,12 +50,14 @@ span {
 	display: table-cell;
 	vertical-align: middle;
 	padding: 0 5px;
+	background: rgb(149, 191, 191);
 }
 .difficulty {
 	width: 90px;
 	height: 90px;
 	display: table-cell;
 	vertical-align: middle;
+	background: rgb(149, 191, 191);
 }
 .difficulty > div {
 	width: 90px;
