@@ -9,11 +9,49 @@ String.prototype.hashCode = function() {
   return (hash + 2147483647) + 1;
 };
 
+function toggle_songs() {
+	if (is_revealed) {
+		$("#toggler").attr("value", "Show songs");
+		for (var i=0; i<10; i++) {
+			$("#song" + i).html("---");
+			$("#diff" + i).html("---");
+			$("#lvl" + i).html("");
+			$("#song" + i).attr("class", "");
+			$("#diff" + i).parent().attr("class", "difficulty");
+			$("#img" + i).attr("class", "");
+			$("#img" + i).attr("src", "dummy.png");
+		}
+	} else {
+		$("#toggler").attr("value", "Hide songs");
+		for (i in indexes) {
+			$("#song" + i).html(songdata[indexes[i]][0]);
+			$("#diff" + i).html(songdata[indexes[i]][1]);
+			$("#lvl" + i).html(songdata[indexes[i]][2]);
+			$("#song" + i).attr("class", songdata[indexes[i]][1]);
+			$("#diff" + i).parent().attr("class", "difficulty " + songdata[indexes[i]][1]);
+			$("#img" + i).attr("class", "");
+			$("#img" + i).attr("src", "dummy.png");
+			
+			if (songdata[indexes[i]][7] != "0") {
+				var img_suffix = "";
+				if (songdata[indexes[i]][1] == "EXH") img_suffix += "3/";
+				else if (songdata[indexes[i]][1] == "MXM") img_suffix += "5/";
+				else img_suffix += "4/";
+				img_suffix += songdata[indexes[i]][7] + ".png"
+				$("#img" + i).attr("src", "https://sdvx.sgfc.co/jackets/" + img_suffix);
+			} else {
+				$("#img" + i).attr("src", "img/" + songdata[indexes[i]][0].hashCode() + songdata[indexes[i]][1] + ".png");
+			}
+		}
+	}
+};
+
 function randomize() {
 	var new_indexes = [];
 	var fixed_ctr = 0;
 	var sub_songdata = [];
 	var sub_indexes = [];
+	var is_revealed = True;
 	
 	for (i in songdata) {
 		if (!($("[name=lv16]").prop("checked")) && songdata[i][2]=="16") continue;
