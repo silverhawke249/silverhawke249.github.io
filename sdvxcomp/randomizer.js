@@ -16,11 +16,12 @@ function toggle_songs() {
 			$("#song" + i).html("---");
 			$("#diff" + i).html("---");
 			$("#lvl" + i).html("");
-			$("#song" + i).attr("class", "");
-			$("#diff" + i).parent().attr("class", "difficulty");
+			$("#song" + i).attr("class", "noentry");
+			$("#diff" + i).parent().attr("class", "difficulty noentry");
 			$("#img" + i).attr("class", "");
 			$("#img" + i).attr("src", "dummy.png");
 		}
+		is_revealed = false;
 	} else {
 		$("#toggler").attr("value", "Hide songs");
 		for (i in indexes) {
@@ -43,6 +44,7 @@ function toggle_songs() {
 				$("#img" + i).attr("src", "img/" + songdata[indexes[i]][0].hashCode() + songdata[indexes[i]][1] + ".png");
 			}
 		}
+		is_revealed = true;
 	}
 };
 
@@ -89,8 +91,8 @@ function randomize() {
 			$("#song" + i).html("---");
 			$("#diff" + i).html("---");
 			$("#lvl" + i).html("");
-			$("#song" + i).attr("class", "");
-			$("#diff" + i).parent().attr("class", "difficulty");
+			$("#song" + i).attr("class", "noentry");
+			$("#diff" + i).parent().attr("class", "difficulty noentry");
 			$("#img" + i).attr("class", "");
 			$("#img" + i).attr("src", "dummy.png");
 		} else {
