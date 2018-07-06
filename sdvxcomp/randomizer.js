@@ -51,7 +51,7 @@ function randomize() {
 	var fixed_ctr = 0;
 	var sub_songdata = [];
 	var sub_indexes = [];
-	var is_revealed = True;
+	var is_revealed = true;
 	
 	for (i in songdata) {
 		if (!($("[name=lv16]").prop("checked")) && songdata[i][2]=="16") continue;
