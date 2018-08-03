@@ -897,5 +897,7 @@ songdata = [["「月風魔伝」龍骨鬼戦 yks Remix","INF","16","0","0","0","
 ["Dark Matter","MXM","17","0","0","0","0","0"],
 ["Justitia Gladius","MXM","17","0","0","0","0","0"],
 ["ホワイトパレード","MXM","18","0","0","0","0","0"],
-["Levier'n NābYss","MXM","18","0","0","0","0","0"]]
-console.log("last update 20180727")
+["Levier'n NābYss","MXM","18","0","0","0","0","0"],
+["FREEDOM DiVE","EXH","17","0","0","0","0","0"],
+["FREEDOM DiVE","MXM","19","0","0","0","0","0"]]
+console.log("last update 20180802")
