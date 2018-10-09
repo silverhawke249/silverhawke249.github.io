@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>DDR randomizer</title>
+		<link rel="stylesheet" href="stylesheet.css">
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="songdata.js"></script>
+		<script type="text/javascript" src="randomizer.js"></script>
+		<script type="text/javascript" src="debug.js"></script>
+	</head>
+	<body onload="pageload();">
+		<div class="container">
+			<div class="songs border">
+				<div class="song">
+					<span class="noentry" id="song0">---</span><div class="difficulty noentry"><div id="diff0">---</div><div id="lvl0"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song1">---</span><div class="difficulty noentry"><div id="diff1">---</div><div id="lvl1"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song2">---</span><div class="difficulty noentry"><div id="diff2">---</div><div id="lvl2"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song3">---</span><div class="difficulty noentry"><div id="diff3">---</div><div id="lvl3"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song4">---</span><div class="difficulty noentry"><div id="diff4">---</div><div id="lvl4"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song5">---</span><div class="difficulty noentry"><div id="diff5">---</div><div id="lvl5"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song6">---</span><div class="difficulty noentry"><div id="diff6">---</div><div id="lvl6"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song7">---</span><div class="difficulty noentry"><div id="diff7">---</div><div id="lvl7"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song8">---</span><div class="difficulty noentry"><div id="diff8">---</div><div id="lvl8"></div></div>
+				</div>
+				<div class="song">
+					<span class="noentry" id="song9">---</span><div class="difficulty noentry"><div id="diff9">---</div><div id="lvl9"></div></div>
+				</div>
+			</div>
+			<div class="options border">
+				<div class="groups">
+					<div class="option">
+						Minimum level
+					</div>
+					<div class="option slider">
+						<input type="range" name="lvl" id="lvl" value="13" min="1" max="19">
+					</div>
+					<div id="lvl-txt" class="option fix-width"></div>
+					<div id="lvl-txt-m" class="option slider fix-width"></div>
+					<div class="option">
+						<input type="range" name="lvl-m" id="lvl-m" value="16" min="1" max="19">
+					</div>
+					<div class="option">
+						Maximum level
+					</div>
+				</div>
+				<div class="groups">
+					<div class="option">
+						Difficulties
+					</div>
+					<div class="option slider">
+						<input type="checkbox" name="beg" id="beg"><label for="beg">BEG</label>
+					</div>
+					<div class="option slider">
+						<input type="checkbox" name="bas" id="bas"><label for="bas">BAS</label>
+					</div>
+					<div class="option slider">
+						<input type="checkbox" name="dif" id="dif"><label for="dif">DIF</label>
+					</div>
+					<div class="option slider">
+						<input type="checkbox" checked=checked name="exp" id="exp"><label for="exp">EXP</label>
+					</div>
+					<div class="option">
+						<input type="checkbox" checked=checked name="cha" id="cha"><label for="cha">CHA</label>
+					</div>
+					<div class="option">
+						Play style
+					</div>
+					<div class="option slider">
+						<input type="checkbox" checked=checked name="sp" id="sp"><label for="sp">Single Play</label>
+					</div>
+					<div class="option">
+						<input type="checkbox" name="dp" id="dp"><label for="dp">Double Play</label>
+					</div>
+				</div>
+				<div class="groups">
+					<div class="option">
+						Keep songs
+					</div>
+					<div class="option">
+						1<input type="checkbox" name="s0"><input type="checkbox" name="s1"><input type="checkbox" name="s2"><input type="checkbox" name="s3"><input type="checkbox" name="s4"><input type="checkbox" name="s5"><input type="checkbox" name="s6"><input type="checkbox" name="s7"><input type="checkbox" name="s8"><input type="checkbox" name="s9">10
+					</div>
+				</div>
+				<div class="groups">
+					<div class="option">
+						<input type="button" value="Randomize" onclick="randomize();">
+						<input type="button" id="toggler" value="Hide songs" onclick="toggle_songs();">
+						<input type="reset" value="Reset options" onclick="reset();">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
