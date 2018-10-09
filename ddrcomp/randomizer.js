@@ -2,20 +2,16 @@ function pageload() {
 	$('#lvl-txt').text($('#lvl').val());
 	$('#lvl-txt-m').text($('#lvl-m').val());
 	$('#lvl').on('input change', function() {
-		if (parseInt($('#lvl').val()) >= parseInt($('#lvl-m').val())) {
-			$('#lvl-m').val(parseInt($('#lvl').val()) + 1)
+		if (parseInt($('#lvl').val()) > parseInt($('#lvl-m').val())) {
+			$('#lvl-m').val(parseInt($('#lvl').val()))
 		}
-		if (parseInt($('#lvl').val()) > 18)
-			$('#lvl').val(18);
 		$('#lvl-txt').text($('#lvl').val());
 		$('#lvl-txt-m').text($('#lvl-m').val());
 	});
 	$('#lvl-m').on('input change', function() {
-		if (parseInt($('#lvl').val()) >= parseInt($('#lvl-m').val())) {
-			$('#lvl').val($('#lvl-m').val() - 1)
+		if (parseInt($('#lvl').val()) > parseInt($('#lvl-m').val())) {
+			$('#lvl').val($('#lvl-m').val())
 		}
-		if (parseInt($('#lvl-m').val()) < 2)
-			$('#lvl-m').val(2);
 		$('#lvl-txt').text($('#lvl').val());
 		$('#lvl-txt-m').text($('#lvl-m').val());
 	});
