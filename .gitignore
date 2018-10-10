@@ -1,4 +1,6 @@
 $ cat gitignore
 
 sdvxcomp/debug.js
+ddrcomp/debug.js
+gdcomp/debug.js
 update.bat
