@@ -1,0 +1,126 @@
+@font-face {
+	font-family: 'Lato';
+	src: url(Lato-Bold.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	background: rgba(0, 0, 0, 0);
+}
+div {
+	font-family: Lato;
+	text-align: center;
+}
+.border {
+	/* border: 2px grey solid;
+	border-radius: 3px; */
+}
+.container {
+	width: 100%;
+	visibility: hidden;
+}
+.container > * {
+	margin: 18px auto;
+	display: block;
+}
+.songs {
+	display: flex;
+	width: 1200px;
+	height: 500px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.song {
+	display: table;
+	padding: 5px;
+	height: 90px;
+	width: 590px;
+	font-size: 24px;
+	user-select: none;
+}
+span {
+	width: 400px;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+.difficulty {
+	width: 90px;
+	height: 90px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.difficulty > div {
+	width: 90px;
+	display: inline-block;
+}
+.options {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: column;
+	width: 1180px;
+	height: 180px;
+	padding: 10px;
+}
+.groups {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 15px;
+	margin: 5px 0;
+}
+.option {
+	margin-right: 50px;
+}
+.option:last-child {
+	margin-right: 0;
+}
+.slider {
+	margin-right: 15px;
+}
+.noentry {
+	background: rgb(149, 191, 191);
+}
+.BSC {
+	background: rgb(138, 205, 255);
+}
+.ADV {
+	background: rgb(255, 252, 117);
+}
+.EXT {
+	background: rgb(255, 100, 100);
+}
+.MAS {
+	background: rgb(170, 113, 240);
+}
+.noentry:hover, .noentry.hovered {
+	background: rgba(149, 191, 191, 0.5);
+}
+.BSC:hover, .BSC.hovered {
+	background: rgba(138, 205, 255, 0.5);
+}
+.ADV:hover, .ADV.hovered {
+	background: rgba(255, 252, 117, 0.5);
+}
+.EXT:hover, .EXT.hovered {
+	background: rgba(255, 100, 100, 0.5);
+}
+.MAS:hover, .MAS.hovered {
+	background: rgba(170, 113, 240, 0.5);
+}
+.disabled {
+	background: rgb(144, 144, 144);
+	color: #555;
+	filter: grayscale(100%);
+}
+.disabled:hover, .disabled.hovered {
+	background: rgba(144, 144, 144, 0.5);
+}
+.fix-width {
+	min-width: 2.5em;
+}
