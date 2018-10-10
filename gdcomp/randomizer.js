@@ -105,9 +105,9 @@ function reset() {
 	}
 	$("[name=bsc]").prop("checked", false);
 	$("[name=lvl]").val(7.00);
-	$("#lvl-txt").text(7.00);
+	$("#lvl-txt").text(two_dec.format(7.00));
 	$("[name=lvl-m]").val(9.00);
-	$("#lvl-txt-m").text(9.00);
+	$("#lvl-txt-m").text(two_dec.format(9.00));
 	return;
 };
 
