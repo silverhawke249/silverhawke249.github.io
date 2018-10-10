@@ -83,8 +83,71 @@ span {
 .option:last-child {
 	margin-right: 0;
 }
+.slider {
+	margin-right: 15px;
+}
 .noentry {
 	background: rgb(149, 191, 191);
+}
+.BEG {
+	background: rgb(68, 231, 254);
+}
+.BAS {
+	background: rgb(253, 178, 1);
+}
+.DIF {
+	background: rgb(238, 29, 35);
+}
+.EXP {
+	background: rgb(99, 254, 99);
+}
+.CHA {
+	background: rgb(253, 129, 254);
+}
+.noentry:hover, .noentry.hovered {
+	background: rgba(149, 191, 191, 0.5);
+}
+.BEG:hover, .BEG.hovered {
+	background: rgba(68, 231, 254, 0.5);
+}
+.BAS:hover, .BAS.hovered {
+	background: rgba(253, 178, 1, 0.5);
+}
+.DIF:hover, .DIF.hovered {
+	background: rgba(238, 29, 35, 0.5);
+}
+.EXP:hover, .EXP.hovered {
+	background: rgba(99, 254, 99, 0.5);
+}
+.CHA:hover, .CHA.hovered {
+	background: rgba(253, 129, 254, 0.5);
+}
+.BSC {
+	background: rgb(138, 205, 255);
+}
+.ADV {
+	background: rgb(255, 252, 117);
+}
+.EXT {
+	background: rgb(255, 100, 100);
+}
+.MAS {
+	background: rgb(170, 113, 240);
+}
+.noentry:hover, .noentry.hovered {
+	background: rgba(149, 191, 191, 0.5);
+}
+.BSC:hover, .BSC.hovered {
+	background: rgba(138, 205, 255, 0.5);
+}
+.ADV:hover, .ADV.hovered {
+	background: rgba(255, 252, 117, 0.5);
+}
+.EXT:hover, .EXT.hovered {
+	background: rgba(255, 100, 100, 0.5);
+}
+.MAS:hover, .MAS.hovered {
+	background: rgba(170, 113, 240, 0.5);
 }
 .EXH {
 	background: rgb(251, 97, 146);
@@ -129,4 +192,7 @@ span {
 }
 img:hover, img.hovered {
 	opacity: 0.5;
+}
+.fix-width {
+	min-width: 1.5em;
 }

@@ -9,6 +9,12 @@ String.prototype.hashCode = function() {
   return (hash + 2147483647) + 1;
 };
 
+function pageload() {
+	$('.container').css('visibility', 'visible');
+	is_revealed = true;
+	indexes = [null, null, null, null, null, null, null, null, null, null];
+};
+
 function toggle_songs() {
 	if (is_revealed) {
 		$("#toggler").attr("value", "Show songs");
@@ -118,6 +124,7 @@ function randomize() {
 	}
 	return;
 };
+
 function reset() {
 	$(":checkbox").prop("checked", true);
 	for (var i=0; i<10; i++) {
