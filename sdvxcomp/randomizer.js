@@ -9,10 +9,62 @@ String.prototype.hashCode = function() {
   return (hash + 2147483647) + 1;
 };
 
+// <-- manual exclusion/inclusion stuff
+function dropdown_update(q) {
+	$('#songlist > option').toggle(false);
+	if (typeof(q) === 'undefined') q = '';
+	for (var i=0; i<inclusion.length; i++)
+		if (songdata[i][0].toLowerCase().includes(q))
+			$('#songlist > option').eq(i).toggle();
+};
+
+function clear_sel() {
+	var setval = !inclusion.some(function(e){ return e });
+	inclusion.fill(setval);
+	$('#songlist > option').each(function(){
+		$(this).prop('selected', setval);
+	});
+};
+// -->
+
 function pageload() {
-	$('.container').css('visibility', 'visible');
 	is_revealed = true;
 	indexes = [null, null, null, null, null, null, null, null, null, null];
+	
+	// <-- manual exclusion/inclusion stuff
+	inclusion = new Array(songdata.length);
+	inclusion.fill(true);
+	
+	for (var i=0; i<inclusion.length; i++)
+		$('#songlist').append($('<option>', {value:i, selected:inclusion[i], text:songdata[i][0] + ' [' + songdata[i][1] + ']'}));
+	
+	$(document).keyup(function(e){
+		if (e.which == 0x31 && e.altKey) {
+			$('.editor').toggle();
+			$('#songsearch').val('');
+			$('#songsearch').focus();
+			dropdown_update();
+		}
+	});
+	$('select > option').mousedown(function(e) {
+		e.preventDefault();
+		var originalScrollTop = $(this).parent().scrollTop();
+		$(this).prop('selected', $(this).prop('selected') ? false : true);
+		inclusion[$(this).val()] = $(this).prop('selected');
+		var self = this;
+		$(this).parent().focus();
+		setTimeout(function() {
+			$(self).parent().scrollTop(originalScrollTop);
+		}, 0);
+		return false;
+	});
+	$('#songsearch').keyup(function() {
+		var q = $(this).val().trim().toLowerCase();
+		dropdown_update(q);
+	});
+	// -->
+	
+	$('.container').css('visibility', 'visible');
 };
 
 function toggle_songs() {
@@ -71,6 +123,8 @@ function randomize() {
 		if (!($("[name=allow_blaster]").prop("checked")) && songdata[i][4]=="1") continue;
 		if (!($("[name=allow_od]").prop("checked")) && songdata[i][5]=="1") continue;
 		if (!($("[name=allow_events]").prop("checked")) && songdata[i][6]=="1") continue;
+		// manual inclusion/exclusion stuff
+		if (!inclusion[i]) continue;
 		sub_indexes.push(i);
 	}
 	
@@ -134,6 +188,11 @@ function reset() {
 	$("[name=lv18]").prop("checked", false);
 	$("[name=lv19]").prop("checked", false);
 	$("[name=lv20]").prop("checked", false);
+	// manual inclusion/exclusion stuff
+	inclusion.fill(true);
+	$('#songlist > option').each(function(){
+		$(this).prop('selected', true);
+	});
 	return;
 };
 

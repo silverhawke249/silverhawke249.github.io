@@ -196,3 +196,24 @@ img:hover, img.hovered {
 .fix-width {
 	min-width: 1.5em;
 }
+.editor {
+	display: none;
+	position: absolute;
+	top: 150px;
+	width: 550px;
+	border: 2px solid black;
+	padding: 5px;
+	background: rgba(150,150,150,0.95);
+}
+#songsearch {
+	width: 300px;
+	margin-right: 5px;
+}
+#songlist {
+	display: block;
+	margin-top: 5px;
+	width: 100%;
+}
+#songlist > option {
+	height: 22px;
+}
