@@ -44,7 +44,7 @@ function pageload() {
 			$('.editor').toggle();
 			$('#songsearch').val('');
 			$('#songsearch').focus();
-			//dropdown_update();
+			dropdown_update();
 		}
 	});
 	$('select > option').mousedown(function(e) {
