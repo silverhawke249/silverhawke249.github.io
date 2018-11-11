@@ -11,11 +11,12 @@ String.prototype.hashCode = function() {
 
 // <-- manual exclusion/inclusion stuff
 function dropdown_update(q) {
-	$('#songlist > option').toggle(false);
-	if (typeof(q) === 'undefined') q = '';
-	for (var i=0; i<inclusion.length; i++)
-		if (songdata[i][0].toLowerCase().includes(q))
-			$('#songlist > option').eq(i).toggle();
+	if (q) {
+		$('#songlist > option').toggle(false);
+		for (var i=0; i<inclusion.length; i++)
+			if (songdata[i][0].toLowerCase().includes(q) || songdata[i][8].some(function(e){ return e.includes(q) }))
+				$('#songlist > option').eq(i).toggle();
+	} else $('#songlist > option').toggle(true);
 };
 
 function clear_sel() {
@@ -43,7 +44,7 @@ function pageload() {
 			$('.editor').toggle();
 			$('#songsearch').val('');
 			$('#songsearch').focus();
-			dropdown_update();
+			//dropdown_update();
 		}
 	});
 	$('select > option').mousedown(function(e) {
