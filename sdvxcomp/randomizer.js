@@ -113,6 +113,7 @@ function randomize() {
 	var sub_songdata = [];
 	var sub_indexes = [];
 	is_revealed = true;
+	$("#toggler").attr("value", "Hide songs");
 	
 	for (i in songdata) {
 		if (!($("[name=lv16]").prop("checked")) && songdata[i][2]=="16") continue;
