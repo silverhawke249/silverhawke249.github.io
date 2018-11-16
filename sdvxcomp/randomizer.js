@@ -116,6 +116,7 @@ function randomize() {
 	$("#toggler").attr("value", "Hide songs");
 	
 	for (i in songdata) {
+		if (songdata[i][2]=="0") continue;
 		if (!($("[name=lv16]").prop("checked")) && songdata[i][2]=="16") continue;
 		if (!($("[name=lv17]").prop("checked")) && songdata[i][2]=="17") continue;
 		if (!($("[name=lv18]").prop("checked")) && songdata[i][2]=="18") continue;
