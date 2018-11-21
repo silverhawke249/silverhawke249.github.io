@@ -204,6 +204,9 @@ songdata = [["「月風魔伝」龍骨鬼戦 yks Remix","INF","16","0","0","0","
 ["憂恋☆アクティベーション","EXH","16","0","0","0","0","449",["urekoi activation"]],
 ["Idola","EXH","17","0","0","0","0","444",[]],
 ["バンブーソード・ガール","EXH","17","0","0","0","0","443",["bamboo sword girl"]],
+["幻想系世界修復少女","HVN","17","0","1","0","0","442",["gensoukei sekai shuufuku shoujo"]],
+["Idola","HVN","18","0","1","0","0","444",[]],
+["バンブーソード・ガール","HVN","19","0","1","0","0","443",["bamboo sword girl"]],
 ["リズの内心革命","INF","16","0","0","0","0","476",["liz no naishin kakumei"]],
 ["悪性ロリィタマキャヴェリズム","EXH","17","0","0","0","0","468",["akusei lolita machiavellism"]],
 ["柳の下のデュラハン hard chaos mix","EXH","17","0","0","0","0","413",["yanagi no shita no dullahan hard chaos mix"]],
@@ -876,7 +879,7 @@ songdata = [["「月風魔伝」龍骨鬼戦 yks Remix","INF","16","0","0","0","
 ["MeteorGlow Aftermath","EXH","16","0","0","0","0","0",[]],
 ["Knights Assault","MXM","17","0","0","0","0","0",[]],
 ["Secret Traveler -MeniRemix-","MXM","17","0","0","0","0","0",[]],
-["プレインエイジア (MRM REMIX)","MXM","17","0","0","0","0","0",["plain asia mrm remix"]],
+["プレインエイジア(MRM REMIX)","MXM","17","0","0","0","0","0",["plain asia mrm remix"]],
 ["失敗作少女","MXM","17","0","0","0","0","0",["shippaisaku shoujo"]],
 ["見世物ライフ","MXM","17","0","0","0","0","0",["misemono life"]],
 ["MeteorGlow Aftermath","MXM","18","0","0","0","0","0",[]],
@@ -948,9 +951,6 @@ songdata = [["「月風魔伝」龍骨鬼戦 yks Remix","INF","16","0","0","0","
 ["No way","MXM","17","0","0","0","0","0",[]],
 ["Akzeriyyuth","MXM","18","0","0","0","0","0",[]],
 ["Beyond the BLUE","MXM","18","0","0","0","0","0",[]],
-["幻想系世界修復少女","HVN","17","0","1","0","0","442",["gensoukei sekai shuufuku shoujo"]],
-["Idola","HVN","18","0","1","0","0","444",[]],
-["バンブーソード・ガール","HVN","19","0","1","0","0","443",["bamboo sword girl"]],
 ["Nostalgic Blood of the Strife","EXH","16","0","0","0","0","0",[]],
 ["Venomous Firefly","EXH","16","0","0","0","0","0",[]],
 ["PROVOES*PROPOSE <<êl fine>>","EXH","16","0","0","0","0","0",["provoes propose el fine"]],
@@ -985,5 +985,12 @@ songdata = [["「月風魔伝」龍骨鬼戦 yks Remix","INF","16","0","0","0","
 ["Midnight City Warfare","EXH","16","1","0","0","0","0",[]],
 ["Sulk","MXM","17","1","0","0","0","0",[]],
 ["Midnight City Warfare","MXM","18","1","0","0","0","0",[]],
-["†渚の小悪魔ラヴリィ～レイディオ†","MXM","18","1","0","0","0","0",["nagisa no koakuma lovely radio"]]]
-console.log("last update 20181115")
+["†渚の小悪魔ラヴリィ～レイディオ†","MXM","18","1","0","0","0","0",["nagisa no koakuma lovely radio"]],
+["Divine's or Deal","EXH","16","0","0","0","0","0",[]],
+["ファイナルレター","EXH","16","0","0","0","0","0",["final letter"]],
+["ブチ上げ候！現代忍者三姉妹","MXM","17","0","0","0","0","0",["buchiage sourou! gendai ninja sanshimai"]],
+["Musha Vibration","MXM","17","0","0","0","0","0",[]],
+["Catch Our Fire!","MXM","18","0","0","0","0","0",[]],
+["Divine's or Deal","MXM","18","0","0","0","0","0",[]],
+["ファイナルレター","MXM","18","0","0","0","0","0",["final letter"]]]
+console.log("last update 20181121")
