@@ -82,7 +82,7 @@ songdata = [["「月風魔伝」龍骨鬼戦 yks Remix","INF","16","0","0","0","
 ["Qubism","EXH","16","0","0","0","0","252",[]],
 ["Qubism","HVN","18","0","1","0","0","252",[]],
 ["魔境堕天録サリエル","HVN","18","0","1","0","0","184",["makyou datenryoku sariel","unlucky morpheus"]],
-["VALLIS-NERIA","EXH","17","1","0","0","0","271",["makyou datenryoku sariel","unlucky morpheus"]],
+["VALLIS-NERIA","EXH","17","1","0","0","0","271",[]],
 ["音楽 -壊音楽 mix-","EXH","17","0","0","0","0","220",["ongaku kaiongaku mix"]],
 ["I'm so Happy","EXH","16","1","0","0","0","272",[]],
 ["C18H27NO3","EXH","16","0","0","0","0","228",["capsaicin"]],
