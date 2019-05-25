@@ -1,9 +1,9 @@
 @font-face {
 	font-family: pmd;
-	src: url('http://silverhawke.xyz/tumblr/PMD.ttf');
+	src: url('https://silverhawke.xyz/tumblr/PMD.ttf');
 }
 body {
-	background: url('http://silverhawke.xyz/tumblr/blogbackground.png');
+	background: url('https://silverhawke.xyz/tumblr/blogbackground.png');
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
@@ -157,7 +157,7 @@ blockquote {
 	border: rgb(12,19,44) solid 5px;
 	border-radius: 5px;
 	float: left;
-	background: url('http://silverhawke.xyz/tumblr/portraitbg.png');
+	background: url('https://silverhawke.xyz/tumblr/portraitbg.png');
 	background-size: 100%;
 }
 .sourcelink {
@@ -266,7 +266,7 @@ blockquote {
 	height: 80px;
 	border: rgb(12,19,44) solid 5px;
 	border-radius: 5px;
-	background: url('http://silverhawke.xyz/tumblr/portraitbg.png');
+	background: url('https://silverhawke.xyz/tumblr/portraitbg.png');
 	background-size: 100%;
 	}
 .select select {
