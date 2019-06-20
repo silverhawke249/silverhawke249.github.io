@@ -37,10 +37,10 @@ li::before {
 a {
     font-weight: bold;
     text-decoration: none;
-    color: #666;
+    color: #688;
 }
 a:hover {
-    color: #999;
+    color: #246;
 }
 .em1:after {
     font-family: monospace;
