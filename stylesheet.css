@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom, #222, #111);
+    display: flex;
+    width: 100%;
+    min-width: 530px;
+    justify-content: center;
+}
+.container {
+    position: relative;
+    width: 500px;
+    padding: 15px;
+    background-color: #ccc;
+    z-index: 0;
+}
+.container>* {
+    position: relative;
+    z-index: 2;
+}
+p {
+    margin-bottom: 10px;
+}
+p:not(:first-child) {
+    margin-top: 20px;
+}
+li {
+    list-style-type: none;
+    margin: 5px 1em;
+}
+li::before {
+    content: ":: ";
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    color: #999;
+}
+.em1:after {
+    font-family: monospace;
+    background-color: #ddd;
+    content: "hi@";
+}
+.em2:after {
+    font-family: monospace;
+    background-color: #ddd;
+    content: "silverhawke.xyz";
+}
+.dc1:after {
+    font-family: monospace;
+    background-color: #ddd;
+    content: "silverhawke";
+}
+.dc2:after {
+    font-family: monospace;
+    background-color: #ddd;
+    content: "#0249";
+}
+.image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.image-positioner {
+    height: 100%;
+    width: 530px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+img {
+    width: 300px;
+    opacity: 0.2;
+}
