@@ -1,4 +1,8 @@
 function rearrangeBlocks(node) {
+	if (node === null) {
+		return [];
+	}
+	
 	let blocks = [];
 	let contentContainer = null;
 	
