@@ -308,3 +308,10 @@ blockquote {
 .tmblr-embed > iframe {
 	max-width: 100%;
 }
+.post-author:not(:last-of-type) {
+	border-bottom: solid 1px white;
+	padding-bottom: 8px;
+}
+.post p:first-of-type {
+	margin-top: 0;
+}
