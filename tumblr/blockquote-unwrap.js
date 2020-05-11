@@ -74,11 +74,12 @@ for (let post of posts) {
 			rearrangeBlocks(child);
 		} else if (child.nodeName == 'DIV') {
 			elementList.push(child);
-			child.parentNode.removeChild(child);
 		} else {
 			rearrangeList.push(child);
-			child.parentNode.removeChild(child);
 		}
+	}
+	for (let child of post.childNodes) {
+		post.removeChild(child);
 	}
 	rearrangeBlocks(rearrangeList);
 	for (let node of rearrangeList) {
