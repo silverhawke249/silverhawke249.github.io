@@ -59,6 +59,8 @@ function rearrangeBlocks(node) {
 		}
 	}
 	
+	console.log(blocks);
+	
 	// Slap the content at the back, and work on the inner content
 	return rearrangeBlocks(contentContainer).concat(blocks);
 }
