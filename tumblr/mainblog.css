@@ -75,6 +75,9 @@ body {
 .post p:not(.post-author){
 	margin: 10px;
 }
+.post p:last-of-type {
+	margin-bottom: 0px;
+}
 .post a {
 	text-decoration: none;
 	color: rgb(205,229,107);
@@ -90,7 +93,7 @@ blockquote {
 	margin: 12px;
 }
 h2 {
-	margin: 10px 0;
+	margin: 10px;
 }
 .post .askface {
 	width: 40px;
