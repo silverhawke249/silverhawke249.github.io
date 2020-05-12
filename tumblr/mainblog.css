@@ -77,11 +77,8 @@ body {
 .post p {
 	margin: 10px 0;
 }
-.text p {
+.post p:first-child {
 	margin-top: 0;
-}
-.text p:last-of-type {
-	margin-bottom: 0;
 }
 .post a {
 	text-decoration: none;
@@ -308,10 +305,10 @@ blockquote {
 .tmblr-embed > iframe {
 	max-width: 100%;
 }
-.post-author:not(:last-of-type) {
-	border-bottom: solid 1px white;
-	padding-bottom: 10px;
+.post-author:not(:first-of-type) {
+	border-top: solid 1px white;
+	padding-top: 10px;
 }
-.post p:first-of-type {
-	margin-top: 0;
+.post-author {
+	font-size: 120%;
 }
