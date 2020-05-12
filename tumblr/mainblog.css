@@ -100,9 +100,11 @@ hr {
 	border-width: 0;
 	border-bottom-width: 1px;
 }
-ul {
+ul,ol {
     margin: 10px;
-    padding-inline-start: 20px;
+    padding-inline-start: 25px;
+}
+ul {
     list-style-type: "*  ";
 }
 li {
