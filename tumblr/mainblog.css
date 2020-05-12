@@ -57,10 +57,9 @@ body {
 	padding: 5px 0;
 }
 .post {
-	width: 500px;
+	width: 520px;
 	background: rgba(33,71,108,0.9);
 	float: right;
-	padding: 10px;
 	margin: 0 auto;
 	margin-bottom: 35px;
 	border-width: 5px 10px;
@@ -70,15 +69,11 @@ body {
 	word-wrap: break-word;
 }
 .post img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
-	border-radius: 5px;
 }
-.post p {
-	margin: 10px 0;
-}
-.post p:first-child {
-	margin-top: 0;
+.post p:not(.post-author){
+	margin: 10px;
 }
 .post a {
 	text-decoration: none;
@@ -88,9 +83,6 @@ body {
 	-ms-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
-}
-.photopost img {
-	width: 100%;
 }
 blockquote {
 	padding-left: 10px;
@@ -120,12 +112,12 @@ h2 {
 	overflow: hidden;
 }
 .footer {
-	width: 100%;
+	width: 97%;
 	background: rgb(36,94,132);
 	border: rgb(12,19,44) solid 1px;
 	font-size: 75%;
 	min-height: 19px;
-	margin-top: 5px;
+	margin: 5px auto;
 }
 .reblogfrom {
 	width: 60%;
@@ -161,7 +153,8 @@ h2 {
 	background-size: 100%;
 }
 .sourcelink {
-	width: 100%;
+	padding-top: 3px;
+	padding-right: 3px;
 	text-align: right;
 	font-size: 80%;
 }
@@ -309,9 +302,15 @@ h2 {
 	max-width: 100%;
 }
 .post-author:not(:first-of-type) {
-	border-top: solid 1px white;
+	border-top: solid 1px rgb(12,19,44);
 	padding-top: 10px;
 }
 .post-author {
 	font-size: 120%;
+	background: rgba(200, 200, 200, 0.15);
+	padding: 10px;
+	margin: 0;
+}
+figure,.photopost {
+	font-size: 0;
 }
