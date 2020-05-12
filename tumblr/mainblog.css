@@ -92,6 +92,20 @@ blockquote {
 h2 {
 	margin: 10px;
 }
+hr {
+	margin: 0;
+	border-color: rgb(12,19,44);
+	border-width: 0;
+	border-bottom-width: 1px;
+}
+ul {
+    margin: 10px;
+    padding-inline-start: 20px;
+    list-style-type: "*  ";
+}
+li {
+	margin: 2px 0;
+}
 .post .askface {
 	width: 40px;
 	padding: 5px;
@@ -159,9 +173,9 @@ h2 {
 	font-size: 80%;
 }
 .title {
+	margin: 10px;
 	font-size: 150%;
 	font-weight: bold;
-	margin-bottom: 15px;
 }
 .chat {
 	margin-bottom: 5px;
@@ -177,25 +191,24 @@ h2 {
 }
 .album {
 	width: 100px;
-	float: left;
+	border-bottom: 1px solid rgb(12,19,44);
+	font-size: 0;
 }
+/* might not be needed
 .album img {
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0;
 	width: 100%;
+}
+*/
+.audio-container {
+    display: flex;
 }
 .audio {
 	width: 500px;
 	min-height: 100px;
-	float: left;
 	background: rgb(36,94,132);
-	box-shadow: 0 0 0 1px rgb(12,19,44) inset;
-	border-radius: 5px;
-	position: relative;
+	border-bottom: solid 1px rgb(12,19,44);
 }
 .with_album {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
 	width: 400px;
 }
 .playcount {
@@ -313,4 +326,11 @@ h2 {
 }
 figure,.photopost,.html_photoset {
 	font-size: 0;
+}
+/* WHY */
+p.npf_chat {
+    font-family: PMD;
+}
+div.npf_row {
+    margin: 0 !important;
 }
