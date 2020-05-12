@@ -89,7 +89,7 @@ blockquote {
 	border-left: solid 2px #fff;
 	margin: 12px;
 }
-h2 {
+h1,h2 {
 	margin: 10px;
 }
 hr {
