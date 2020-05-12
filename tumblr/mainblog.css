@@ -97,6 +97,9 @@ blockquote {
 	border-left: solid 2px #fff;
 	margin: 12px;
 }
+h2 {
+	margin: 10px 0;
+}
 .post .askface {
 	width: 40px;
 	padding: 5px;
