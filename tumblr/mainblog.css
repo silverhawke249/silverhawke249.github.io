@@ -1,5 +1,5 @@
 @font-face {
-	font-family: pmd;
+	font-family: "PMD";
 	src: url('https://silverhawke.xyz/tumblr/PMD.ttf');
 }
 body {
@@ -7,8 +7,9 @@ body {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	font-family: "pmd";
+	font-family: "PMD", monospace;
 	font-size: 10pt;
+	letter-spacing: 0.3px;
 	color: #fff;
 	text-shadow: 1px 1px #000;
 }
@@ -72,7 +73,8 @@ body {
 	width: 100%;
 	height: auto;
 }
-.post p:not(.post-author){
+/* really don't understand why sometimes there's a div instead of a p */
+.post p:not(.post-author), .post>.text>div{
 	margin: 10px;
 }
 .post a {
@@ -278,7 +280,8 @@ li {
 .select select {
 	width: 80%;
 	border: 1px solid rgb(12,19,44);
-	font-family: "pmd";
+	font-family: "PMD", monospace;
+	letter-spacing: 0.3px;
 	color: #fff;
 	background-color: rgb(36,94,132);
 	margin: 5px 0;
@@ -294,22 +297,23 @@ li {
 }
 #s-m-t-tooltip {
 	/* basic */
-	max-width:300px;
-	z-index:9999;
-	margin-left:20px;
-	margin-top:4px;
+	max-width: 300px;
+	z-index: 9999;
+	margin-left: 20px;
+	margin-top: 4px;
 	/* style and design */
-	padding:2px 4px;
-	background:rgba(33,71,108,0.9);
+	padding: 2px 4px;
+	background: rgba(33,71,108,0.9);
 	border: rgb(12,19,44) solid 1px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	/* font */
-	font-family:"pmd";
-	font-size:80%;
-	line-height:16px;
-	color:#fff;
+	font-family: "PMD", monospace;
+	font-size: 80%;
+	letter-spacing: 0.3px;
+	line-height: 16px;
+	color: #fff;
 }
 .tmblr-embed > iframe {
 	max-width: 100%;
@@ -329,7 +333,7 @@ figure,.photopost,.html_photoset {
 }
 /* WHY */
 p.npf_chat {
-    font-family: PMD;
+    font-family: "PMD", monospace;
 }
 div.npf_row {
     margin: 0 !important;
