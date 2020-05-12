@@ -211,6 +211,7 @@ li {
 	min-height: 100px;
 	background: rgb(36,94,132);
 	border-bottom: solid 1px rgb(12,19,44);
+	position: relative;
 }
 .with_album {
 	width: 400px;
