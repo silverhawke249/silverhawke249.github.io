@@ -112,17 +112,16 @@ li {
 }
 .post .askface {
 	width: 40px;
-	padding: 5px;
+	height: 40px;
+	margin: 10px;
 	float: left;
-}
-.post .askface img {
 	border: rgb(12,19,44) solid 2px;
 }
 .post .ask {
-	width: 430px;
-	padding: 5px 10px;
+	width: 426px;
+	margin: 10px 10px 10px 0;
 	float: left;
-	min-height: 49px;
+	min-height: 40px;
 }
 .clear {
 	clear: both;
@@ -321,7 +320,7 @@ li {
 .tmblr-embed > iframe {
 	max-width: 100%;
 }
-.post-author:not(:first-of-type) {
+.post-author:not(:first-child) {
 	border-top: solid 1px rgb(12,19,44);
 	padding-top: 10px;
 }
