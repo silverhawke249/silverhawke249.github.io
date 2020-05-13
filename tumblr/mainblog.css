@@ -338,6 +338,6 @@ p.npf_chat {
 div.npf_row {
     margin: 0 !important;
 }
-.post>div:not([class]) {
+.post>div:not([class]), div.hide_overflow {
     margin: 10px;
 }
