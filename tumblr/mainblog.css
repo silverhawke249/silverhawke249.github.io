@@ -1,104 +1,104 @@
 @font-face {
-	font-family: "PMD";
-	src: url('https://silverhawke.xyz/tumblr/PMD.ttf');
+    font-family: "PMD";
+    src: url('https://silverhawke.xyz/tumblr/PMD.ttf');
 }
 body {
-	background: url('https://silverhawke.xyz/tumblr/blogbackground.png');
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;
-	font-family: "PMD", monospace;
-	font-size: 10pt;
-	letter-spacing: 0.3px;
-	color: #fff;
-	text-shadow: 1px 1px #000;
+    background: url('https://silverhawke.xyz/tumblr/blogbackground.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: "PMD", monospace;
+    font-size: 10pt;
+    letter-spacing: 0.3px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
 }
 .sidebarwrap a:hover, .post a:hover, .tags a:hover {
-	color: rgb(136,163,29);
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+    color: rgb(136,163,29);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 .wrapper {
-	width: 900px;
-	margin: 0 auto;
+    width: 900px;
+    margin: 0 auto;
 }
 .content {
-	width: 600px;
-	float: right;
-	margin: 25px 0 0 0;
+    width: 600px;
+    float: right;
+    margin: 25px 0 0 0;
 }
 .sidebarwrap {
-	width: 210px;
-	background: rgba(33,71,108,0.9);
-	float: left;
-	padding: 10px;
-	margin: 0;
-	border-width: 5px 10px;
-	border-color: rgb(12,19,44);
-	border-style: solid;
-	border-radius: 7px;
-	position: fixed;
-	top: 200px;
-	color: #fff;
-	text-align: center;
+    width: 210px;
+    background: rgba(33,71,108,0.9);
+    float: left;
+    padding: 10px;
+    margin: 0;
+    border-width: 5px 10px;
+    border-color: rgb(12,19,44);
+    border-style: solid;
+    border-radius: 7px;
+    position: fixed;
+    top: 200px;
+    color: #fff;
+    text-align: center;
 }
 .sidebarwrap a {
-	text-decoration: none;
-	color: rgb(205,229,107);
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+    text-decoration: none;
+    color: rgb(205,229,107);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 .desc {
-	padding: 5px 0;
+    padding: 5px 0;
 }
 .post {
-	width: 500px;
-	background: rgba(33,71,108,0.9);
-	float: right;
-	margin: 0 auto;
-	margin-bottom: 35px;
-	border-width: 5px 10px;
-	border-color: rgb(12,19,44);
-	border-style: solid;
-	border-radius: 7px;
-	word-wrap: break-word;
+    width: 500px;
+    background: rgba(33,71,108,0.9);
+    float: right;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    border-width: 5px 10px;
+    border-color: rgb(12,19,44);
+    border-style: solid;
+    border-radius: 7px;
+    word-wrap: break-word;
 }
 .post img {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 /* really don't understand why sometimes there's a div instead of a p */
 .post p:not(.post-author), .post>.text>div{
-	margin: 10px;
+    margin: 10px;
 }
 .post a {
-	text-decoration: none;
-	color: rgb(205,229,107);
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+    text-decoration: none;
+    color: rgb(205,229,107);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 blockquote {
-	padding-left: 10px;
-	border-left: solid 2px #fff;
-	margin: 12px;
+    padding-left: 10px;
+    border-left: solid 2px #fff;
+    margin: 12px;
 }
 h1,h2 {
-	margin: 10px;
+    margin: 10px;
 }
 hr {
-	margin: 0;
-	border-color: rgb(12,19,44);
-	border-width: 0;
-	border-bottom-width: 1px;
+    margin: 0;
+    border-color: rgb(12,19,44);
+    border-width: 0;
+    border-bottom-width: 1px;
 }
 ul,ol {
     margin: 10px;
@@ -108,228 +108,228 @@ ul {
     list-style-type: "*  ";
 }
 li {
-	margin: 2px 0;
+    margin: 2px 0;
 }
 .post .askface {
-	width: 40px;
-	height: 40px;
-	margin: 10px;
-	float: left;
-	border: rgb(12,19,44) solid 2px;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: left;
+    border: rgb(12,19,44) solid 2px;
 }
 .post .ask {
-	width: 426px;
-	margin: 10px 10px 10px 0;
-	float: left;
-	min-height: 40px;
+    width: 426px;
+    margin: 10px 10px 10px 0;
+    float: left;
+    min-height: 40px;
 }
 .clear {
-	clear: both;
-	height: 0px;
-	overflow: hidden;
+    clear: both;
+    height: 0px;
+    overflow: hidden;
 }
 .footer {
-	width: 97%;
-	background: rgb(36,94,132);
-	border: rgb(12,19,44) solid 1px;
-	font-size: 75%;
-	min-height: 19px;
-	margin: 5px auto;
+    width: 97%;
+    background: rgb(36,94,132);
+    border: rgb(12,19,44) solid 1px;
+    font-size: 75%;
+    min-height: 19px;
+    margin: 5px auto;
 }
 .reblogfrom {
-	width: 60%;
-	float: left;
-	padding: 3px 6px;
+    width: 60%;
+    float: left;
+    padding: 3px 6px;
 }
 .source {
-	width: 35%;
-	float: right;
-	padding: 3px 6px;
-	text-align: right;
+    width: 35%;
+    float: right;
+    padding: 3px 6px;
+    text-align: right;
 }
 .tags {
-	width: 100%;
-	float: left;
-	padding: 3px 6px;
+    width: 100%;
+    float: left;
+    padding: 3px 6px;
 }
 .tags a {
-	color: rgb(205,219,168);
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+    color: rgb(205,219,168);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 .reblogface {
-	width: 64px;
-	height: 64px;
-	border: rgb(12,19,44) solid 5px;
-	border-radius: 5px;
-	float: left;
-	background: url('https://silverhawke.xyz/tumblr/portraitbg.png');
-	background-size: 100%;
+    width: 64px;
+    height: 64px;
+    border: rgb(12,19,44) solid 5px;
+    border-radius: 5px;
+    float: left;
+    background: url('https://silverhawke.xyz/tumblr/portraitbg.png');
+    background-size: 100%;
 }
 .sourcelink {
-	padding-top: 3px;
-	padding-right: 3px;
-	text-align: right;
-	font-size: 80%;
+    padding-top: 3px;
+    padding-right: 3px;
+    text-align: right;
+    font-size: 80%;
 }
 .title {
-	margin: 10px;
-	font-size: 150%;
-	font-weight: bold;
+    margin: 10px;
+    font-size: 150%;
+    font-weight: bold;
 }
 .chat {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 .quote {
-	margin: 10px;
-	font-size: 150%;
+    margin: 10px;
+    font-size: 150%;
 }
 .quotesource {
-	text-align: right;
-	padding-right: 5px 25px;
-	font-style: italic;
+    text-align: right;
+    padding-right: 5px 25px;
+    font-style: italic;
 }
 .album {
-	width: 100px;
-	font-size: 0;
+    width: 100px;
+    font-size: 0;
 }
 /* might not be needed
 .album img {
-	width: 100%;
+    width: 100%;
 }
 */
 .audio-container {
     display: flex;
 }
 .audio {
-	width: 500px;
-	min-height: 100px;
-	background: rgb(36,94,132);
-	position: relative;
+    width: 500px;
+    min-height: 100px;
+    background: rgb(36,94,132);
+    position: relative;
 }
 .with_album {
-	width: 400px;
+    width: 400px;
 }
 .playcount {
-	display: inline;
-	float: right;
-	text-align: right;
-	margin: 0 auto;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: 7px;
+    display: inline;
+    float: right;
+    text-align: right;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
 }
 .id3 {
-	padding-left: 7px;
-	font-size: 150%;
+    padding-left: 7px;
+    font-size: 150%;
 }
 .normalf {
-	font-size: 100%;
+    font-size: 100%;
 }
 .smallf {
-	font-size: 80%;
+    font-size: 80%;
 }
 .tumblr_audio_player {
-	width: 100%;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .with_album .tumblr_audio_player {
-	border-top-left-radius: 0;
+    border-top-left-radius: 0;
 }
 .odd {
-	background: rgb(36,94,132);
+    background: rgb(36,94,132);
 }
 .chat th {
-	width: 15%;
-	text-align: left;
-	padding: 0 7px;
+    width: 15%;
+    text-align: left;
+    padding: 0 7px;
 }
 .chat td {
-	padding: 0 5px;
+    padding: 0 5px;
 }
 .note img {
-	width: 16px;
-	vertical-align: middle;
-	padding-right: 5px;
+    width: 16px;
+    vertical-align: middle;
+    padding-right: 5px;
 }
 .notes {
-	margin: 0 auto;
-	padding: 0 0 0 30px;
+    margin: 0 auto;
+    padding: 0 0 0 30px;
 }
 .portrait {
-	width: 0;
-	height: 0;
-	float: left;
-	position: relative;
-	top: -110px;
-	left: -15px;
+    width: 0;
+    height: 0;
+    float: left;
+    position: relative;
+    top: -110px;
+    left: -15px;
 }
 .portrait img {
-	width: 80px;
-	height: 80px;
-	border: rgb(12,19,44) solid 5px;
-	border-radius: 5px;
-	background: url('https://silverhawke.xyz/tumblr/portraitbg.png');
-	background-size: 100%;
-	}
+    width: 80px;
+    height: 80px;
+    border: rgb(12,19,44) solid 5px;
+    border-radius: 5px;
+    background: url('https://silverhawke.xyz/tumblr/portraitbg.png');
+    background-size: 100%;
+    }
 .select select {
-	width: 80%;
-	border: 1px solid rgb(12,19,44);
-	font-family: "PMD", monospace;
-	letter-spacing: 0.3px;
-	color: #fff;
-	background-color: rgb(36,94,132);
-	margin: 5px 0;
+    width: 80%;
+    border: 1px solid rgb(12,19,44);
+    font-family: "PMD", monospace;
+    letter-spacing: 0.3px;
+    color: #fff;
+    background-color: rgb(36,94,132);
+    margin: 5px 0;
 }
 .pagination {
-	padding-top: 5px;
+    padding-top: 5px;
 }
 .pagination a {
-	visibility: hidden;
+    visibility: hidden;
 }
 .fullwidth {
-	width: 100%;
+    width: 100%;
 }
 #s-m-t-tooltip {
-	/* basic */
-	max-width: 300px;
-	z-index: 9999;
-	margin-left: 20px;
-	margin-top: 4px;
-	/* style and design */
-	padding: 2px 4px;
-	background: rgba(33,71,108,0.9);
-	border: rgb(12,19,44) solid 1px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	/* font */
-	font-family: "PMD", monospace;
-	font-size: 80%;
-	letter-spacing: 0.3px;
-	line-height: 16px;
-	color: #fff;
+    /* basic */
+    max-width: 300px;
+    z-index: 9999;
+    margin-left: 20px;
+    margin-top: 4px;
+    /* style and design */
+    padding: 2px 4px;
+    background: rgba(33,71,108,0.9);
+    border: rgb(12,19,44) solid 1px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    /* font */
+    font-family: "PMD", monospace;
+    font-size: 80%;
+    letter-spacing: 0.3px;
+    line-height: 16px;
+    color: #fff;
 }
 .tmblr-embed > iframe {
-	max-width: 100%;
+    max-width: 100%;
 }
 .post-author:not(:first-child) {
-	border-top: solid 1px rgb(12,19,44);
-	padding-top: 10px;
+    border-top: solid 1px rgb(12,19,44);
+    padding-top: 10px;
 }
 .post-author {
-	font-size: 120%;
-	background: rgba(200, 200, 200, 0.15);
-	padding: 10px;
-	margin: 0;
+    font-size: 120%;
+    background: rgba(200, 200, 200, 0.15);
+    padding: 10px;
+    margin: 0;
 }
 figure,.photopost,.html_photoset {
-	font-size: 0;
+    font-size: 0;
 }
 /* WHY */
 p.npf_chat {
