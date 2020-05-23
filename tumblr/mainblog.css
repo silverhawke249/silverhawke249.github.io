@@ -223,8 +223,11 @@ li {
     bottom: 0;
     padding: 7px;
 }
+.id3:first-of-type {
+	margin-top: 7px;
+}
 .id3 {
-    padding-left: 7px;
+    margin: 0 7px;
     font-size: 150%;
 }
 .normalf {
