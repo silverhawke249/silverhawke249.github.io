@@ -180,6 +180,11 @@ li {
     font-size: 150%;
     font-weight: bold;
 }
+.link-source {
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 67%;
+}
 .chat {
     margin-bottom: 5px;
 }
