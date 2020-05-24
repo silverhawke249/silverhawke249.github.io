@@ -77,6 +77,10 @@ body {
 .post p:not(.post-author), .post>.text>div, .post>a{
     margin: 10px;
 }
+/* sure hope this doesn't break anything lol */
+.post>a {
+    display: block;
+}
 .post a {
     text-decoration: none;
     color: rgb(205,229,107);
