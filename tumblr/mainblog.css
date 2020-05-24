@@ -74,7 +74,7 @@ body {
     height: auto;
 }
 /* really don't understand why sometimes there's a div instead of a p */
-.post p:not(.post-author), .post>.text>div{
+.post p:not(.post-author), .post>.text>div, .post>a{
     margin: 10px;
 }
 .post a {
