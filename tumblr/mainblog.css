@@ -247,8 +247,6 @@ li {
 }
 .tumblr_audio_player {
     width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
 }
 .with_album .tumblr_audio_player {
     border-top-left-radius: 0;
