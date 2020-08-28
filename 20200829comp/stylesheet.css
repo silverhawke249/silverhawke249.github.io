@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Migu";
+    src: url("migu-1m-regular.ttf");
+}
+* {
+    margin: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Migu", monospace, sans-serif;
+    font-size: 18pt;
+    user-select: none;
+}
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    margin-bottom: 75px;
+    font-size: 48pt;
+    font-weight: bold;
+}
+.songname {
+    margin-bottom: 75px;
+}
+.next {
+    margin-bottom: 15px;
+}
+#songname {
+    font-size: 36pt;
+}
+#nextsong {
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    background: gray;
+}
+#nextsong:hover {
+    background: lightgray;
+}
