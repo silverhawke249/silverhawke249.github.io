@@ -20,6 +20,7 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .header {
     margin-bottom: 75px;
