@@ -71,6 +71,9 @@ function randomize() {
         let chars = [];
         for (let i = 0; i < loop_len.length; i++) {
             if (loop_len[i] > counter) {
+				if (song_title.charCodeAt(i) > 255) {
+					chars.push(sample_array(randomletters));
+				}
                 chars.push(sample_array(randomletters));
                 all_done = false;
             } else {
