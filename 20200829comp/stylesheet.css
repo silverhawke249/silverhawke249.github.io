@@ -23,19 +23,19 @@ div {
     text-align: center;
 }
 .header {
-    margin-bottom: 75px;
-    font-size: 48pt;
+    margin-bottom: 60px;
+    font-size: 40pt;
     font-weight: bold;
 }
 .songname {
     width: 100%;
-    margin-bottom: 75px;
+    margin-bottom: 60px;
 }
 .next {
     margin-bottom: 15px;
 }
 #songname {
-    font-size: 36pt;
+    font-size: 28pt;
 }
 #nextsong {
     border: 3px solid black;
