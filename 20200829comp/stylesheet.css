@@ -28,6 +28,7 @@ div {
     font-weight: bold;
 }
 .songname {
+    width: 100%;
     margin-bottom: 75px;
 }
 .next {
